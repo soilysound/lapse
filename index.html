@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style>
+		img {
+			width: 1em;
+			height: 1em;
+			outline: 1px solid red;
+		}
+
+		.view {
+			position: relative;
+			width: 100%;
+			margin: 0 auto;
+			max-width: 600px;
+		}
+
+		.view:after {
+			content: "";
+			padding-bottom: 56.25%;
+			display: block;
+		}
+
+		.view > img {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<imagecache>
+	</imagecache>
+	<div class="view">
+		<img src="" alt="">
+	</div>
+
+	<button class="play">play/pause</button>
+  <form action="" onsubmit="goToFrame(this.querySelector('input').value);return false;"><input type="text" value=""><button>goto</button></form>
+	<script>
+
+		var json = {
+			items: 48,
+			frames: [{"src":"http://e1.365dm.com/15/10/16-9/20/moeen-ali-james-anderson-pakistan-v-england_3366902.jpg?20151022093548"},{"src":"http://e1.365dm.com/15/09/16-9/30/louis-van-gaal-manchester-united-press-conference-champions-league_3357784.jpg?20150930083600"},{"src":"http://e0.365dm.com/15/10/16-9/30/form-team-stats_3367106.jpg?20151022165643"},{"src":"http://e2.365dm.com/15/10/16-9/30/rio-ferdinand-football-old-trafford_3367251.jpg?20151023073115"},{"src":"http://e2.365dm.com/15/09/16-9/30/football-pundit-paul-merson_3354482.jpg?20150922121814"},{"src":"http://e1.365dm.com/15/10/16-9/30/premier-league-preview-pellegrini-van-gaal-wenger-blog-managers_3366994.jpg?20151022124901"},{"src":"http://e1.365dm.com/15/10/16-9/30/hamilton-vettel-gossip_3362353.jpg?20151011144437"},{"src":"http://e1.365dm.com/15/10/16-9/30/jurgen-klopp-anfield-liverpool-rubin-kazan-europa-league_3367204.jpg?20151022213921"},{"src":"http://e1.365dm.com/15/08/16-9/30/lionel-messi-barcelona-uefa-super-cup_3336165.jpg?20150811202136"},{"src":"http://e0.365dm.com/15/10/16-9/30/kris-commons-angry-rant-celtic-molde-europa-league_3367217.jpg?20151022232316"},{"src":"http://e2.365dm.com/15/10/16-9/30/wayne-rooney-manchester-united_3365739.jpg?20151018232536"},{"src":"http://e1.365dm.com/15/10/16-9/30/diego-costa-chelsea-football_3367271.jpg?20151023082725"},{"src":"http://e2.365dm.com/15/10/16-9/30/jurgen-klopp-applauds-fans-applause-liverpool-anfield-rubin-kazan-europa-league_3367210.jpg?20151022223924"},{"src":"http://e1.365dm.com/15/10/16-9/30/marshawn-lynch-seattle-seahawks-nfl_3367233.jpg?20151023064628"},{"src":"http://e1.365dm.com/15/09/1-1/40/sergio-aguero-sky-sports-logo_3351298.jpg?20150915110529"},{"src":"http://e1.365dm.com/15/05/1-1/40/now-tv-ticket_3308261.jpg?20150526100350"},{"src":"http://e1.365dm.com/15/10/1-1/40/swoty-sportswomen-of-the-year-awards-logo-square_3366314.jpg?20151020145341"},{"src":"http://e1.365dm.com/15/09/1-1/40/webb-ellis-cup-england-fiji-world-rugby-twickenham_3355253.jpg?20150924131246"},{"src":"http://e2.365dm.com/15/05/1-1/40/sky-sports-audio-app_3309277.jpg?20150529110908"},{"src":"http://e1.365dm.com/15/10/1-1/40/sky-sports-channels-promo_3363878.jpg?20151014104035"},{"src":"http://e1.365dm.com/15/05/1-1/40/transfer-centre-promo_3309270.jpg?20150529104339"},{"src":"http://e0.365dm.com/15/10/16-9/30/FmbmVjeDqPyPkq-1XeyKkbFHkcXqZDpC.jpg"},{"src":"http://e2.365dm.com/15/10/16-9/30/V2bjhjeDrwYoQH5AI4RMAVGwroGnKpVD.jpg"},{"src":"http://e1.365dm.com/15/10/16-9/30/story-day_3366899.jpg?20151022092550"},{"src":"http://e2.365dm.com/15/10/16-9/30/dwMDVjeDpMR0veIAYgN_rnwNY7a-lgLt.jpg"},{"src":"http://e1.365dm.com/15/10/16-9/30/sky-bet-free-bet-football-league_3364094.jpg?20151015082116"},{"src":"http://e0.365dm.com/15/03/16-9/30/jeff-stelling-super-six-super6_3272411.jpg?20150821173158"},{"src":"http://e2.365dm.com/15/09/16-9/30/webb-ellis-cup-england-fiji-world-rugby-twickenham_3355253.jpg?20150924131246"},{"src":"http://e0.365dm.com/15/09/16-9/30/rooney-man-utd_3348580.jpg?20150914110721"},{"src":"http://e1.365dm.com/15/10/16-9/30/schmeichel-man-utd-man-city_3364437.jpg?20151016111216"},{"src":"http://e1.365dm.com/15/10/16-9/30/wg-grace-cricket-painting_3366601.jpg?20151021095019"},{"src":"http://e0.365dm.com/15/10/16-9/30/who-has-your-team-beaten-graphic-cover-wins-losses_3366793.jpg?20151021183725"},{"src":"http://e0.365dm.com/13/07/1-1/40/graeme-souness-football-expert-opinion_2976960.jpg?20130723112900"},{"src":"http://e1.365dm.com/13/07/1-1/40/paul-merson-football-expert-opinion_2977086.jpg?20130723152239"},{"src":"http://e0.365dm.com/14/09/1-1/40/jamie-moore-scribble_3201627.jpg?20140908154702"},{"src":"http://e1.365dm.com/13/08/1-1/40/martin-tyler-football-profile_2991318.jpg?20150325171001"}]
+		}
+		var playState = 1;
+		var currentFrame = 0;
+		// view frame
+		var view = document.querySelector('.view');
+		var viewFrame = view.querySelector('img');
+
+    // live updating node list
+    var cache = document.getElementsByTagName('imagecache')[0]
+    var frames = cache.getElementsByTagName('img');
+
+    function setUp(){
+
+      cache.innerHTML = "";
+
+    	for(var i = -1;++i<json.items;){
+    		var img = new Image();
+    		if(json.frames[i]){
+    			img.src = json.frames[i].src;
+    		}
+    		else {
+    			img.src = "about:blank";
+    		}
+    		cache.appendChild(img);
+    		img.goTo = function(){
+    			viewFrame.src = this.src;
+    		}
+    	}
+
+    	if(playState === 1){
+  			goToFrame(json.frames.length-1);
+  			currentFrame = json.frames.length-1;
+  		}
+
+    }
+
+    function insertFrame(index, src){
+    	frames[index].src = src;
+    }
+
+
+    function goToFrame(index){
+      if(!frames[index]){
+        return;
+      }
+    	viewFrame.src = frames[index].src;
+    	currentFrame = index;
+    }
+
+    function play(){
+
+    	if(currentFrame >= json.frames.length){
+        currentFrame = 0;
+      }
+    	if(playState === 2){
+    		frames[currentFrame].goTo();
+    		currentFrame++;
+    		
+    	}
+
+    	setTimeout(function(){
+	    	requestAnimationFrame(play);
+    	}, 333);
+
+    }
+
+    document.querySelector('.play').onclick = function(){
+    	if(this.getAttribute('play') === '2'){
+    		playState = 1;
+    		this.setAttribute('play', 1);
+    	}
+
+    	else {
+    		playState = 2;
+    		this.setAttribute('play', 2);
+    	}
+    }
+
+    setUp();
+    play();
+
+    setInterval(function(){
+
+      setUp();
+
+    }, 10000)
+
+
+	</script>
+</body>
+</html>

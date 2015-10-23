@@ -1,0 +1,11 @@
+{
+  "name": "lapse",
+  "version": "0.0.0",
+  "description": "time lapse cam of leeds dock construction",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lapse@sky.uk",
+  "license": "BSD-2-Clause"
+}
