@@ -5,6 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
 	<style>
+
+        imagecache {
+            display: none
+        }
+
 		img {
 			width: 1em;
 			height: 1em;
@@ -29,9 +34,30 @@
 			height: 100%;
 			width: 100%;
 		}
+
+        body[data-background-transition]{
+            -webkit-transition: all 2s ease-in-out;
+            transition: all 2s ease-in-out;
+        }
+
+        body[data-background-transition="1"] {
+            background: black;
+            color: white
+        }
+        
+        body[data-background-transition="24"] {
+            background: white;
+            color: black
+        }
+
+        body[data-background-transition="48"] {
+            background: black;
+            color: white
+        }
 	</style>
 </head>
 <body>
+    <h1>Sky@Leeds Dock webcam</h1>
 	<imagecache>
 	</imagecache>
 	<div class="view">
@@ -40,6 +66,9 @@
 
 	<button class="play">play/pause</button>
   <form action="" onsubmit="goToFrame(this.querySelector('input').value);return false;"><input type="text" value=""><button>goto</button></form>
+
+  <button onclick="setBackground(24)">day</button>
+  <button onclick="setBackground(48)">night</button>
 	<script>
 
 		var json = {
@@ -109,6 +138,13 @@
 	    	requestAnimationFrame(play);
     	}, 333);
 
+    }
+
+    function setBackground(tick, speed){
+        speed = !isNaN(speed) ? speed : 2000;
+        var body = document.body;
+        body.style.transitionDuration = speed + 'ms';
+        document.body.setAttribute('data-background-transition', tick);
     }
 
     document.querySelector('.play').onclick = function(){
