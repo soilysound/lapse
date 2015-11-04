@@ -1,174 +1,141 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<style>
+<html prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+   <head>
+      <meta charset=utf-8>
+      <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+      <title>Sky@Leeds Dock - The story so far</title>
 
-        imagecache {
-            display: none
-        }
+      <meta name=viewport content="width=device-width, initial-scale=1">
+      <meta name=apple-mobile-web-app-capable content=yes>
+      <meta name=description content="Sky@Leeds Dock - The story so far">
+      <meta property=og:title content="Sky@Leeds Dock - The story so far">
+      <meta property=og:type content="Sky@Leeds Dock - The story so far">
+      <meta property=og:url content="Sky@Leeds Dock - The story so far">
+      <meta property=og:image content="largetile.png">
+      <meta property=og:description content="Sky@Leeds Dock - The story so far">
+      <meta property=og:locale content="en_UK">
+      <meta property=og:site_name content="Sky@Leeds Dock - The story so far">
+      <meta name=twitter:card content=summary>
+      <meta name=twitter:description content="Sky@Leeds Dock - The story so far">
+      <meta name=twitter:title content="Sky@Leeds Dock - The story so far">
+      <meta name=twitter:site content="Sky@Leeds Dock - The story so far">
+      <meta name=twitter:domain content="Sky@Leeds Dock - The story so far">
+      <meta name=twitter:image:src content="Sky@Leeds Dock - The story so far">
+      <meta name=twitter:creator content="Sky@Leeds Dock - The story so far">
+  
+      <link rel="shortcut icon" href=/img/favicon.ico type=image/x-icon>
+      <link rel=apple-touch-icon sizes=57x57 href=/img/apple-touch-icon-57x57.png>
+      <link rel=apple-touch-icon sizes=60x60 href=/img/apple-touch-icon-60x60.png>
+      <link rel=apple-touch-icon sizes=72x72 href=/img/apple-touch-icon-72x72.png>
+      <link rel=apple-touch-icon sizes=76x76 href=/img/apple-touch-icon-76x76.png>
+      <link rel=apple-touch-icon sizes=114x114 href=/img/apple-touch-icon-114x114.png>
+      <link rel=apple-touch-icon sizes=120x120 href=/img/apple-touch-icon-120x120.png>
+      <link rel=apple-touch-icon sizes=144x144 href=/img/apple-touch-icon-144x144.png>
+      <link rel=apple-touch-icon sizes=152x152 href=/img/apple-touch-icon-152x152.png>
+      <link rel=apple-touch-icon sizes=180x180 href=/img/apple-touch-icon-180x180.png>
+      <link rel=icon type=image/png href=/img/favicon-16x16.png sizes=16x16>
+      <link rel=icon type=image/png href=/img/favicon-32x32.png sizes=32x32>
+      <link rel=icon type=image/png href=/img/favicon-96x96.png sizes=96x96>
+      <link rel=icon type=image/png href=/img/android-chrome-192x192.png sizes=192x192>
+      <meta name=msapplication-square70x70logo content=/img/smalltile.png>
+      <meta name=msapplication-square150x150logo content=/img/mediumtile.png>
+      <meta name=msapplication-wide310x150logo content=/img/widetile.png>
+      <meta name=msapplication-square310x310logo content=/img/largetile.png>
 
-		img {
-			width: 1em;
-			height: 1em;
-			outline: 1px solid red;
-		}
-
-		.view {
-			position: relative;
-			width: 100%;
-			margin: 0 auto;
-			max-width: 600px;
-		}
-
-		.view:after {
-			content: "";
-			padding-bottom: 56.25%;
-			display: block;
-		}
-
-		.view > img {
-			position: absolute;
-			height: 100%;
-			width: 100%;
-		}
-
-        body[data-background-transition]{
-            -webkit-transition: all 2s ease-in-out;
-            transition: all 2s ease-in-out;
-        }
-
-        body[data-background-transition="1"] {
-            background: black;
-            color: white
-        }
-        
-        body[data-background-transition="24"] {
-            background: white;
-            color: black
-        }
-
-        body[data-background-transition="48"] {
-            background: black;
-            color: white
-        }
-	</style>
+      <link rel="stylesheet" href="css/styles.css">
+      <script>
+        (function(){
+          var date = new Date();
+          var hour = date.getHours();
+          var tick = Math.ceil(hour / 4);
+          document.documentElement.className += ' tick-' + tick;
+        })()
+      </script>
 </head>
 <body>
-    <h1>Sky@Leeds Dock webcam</h1>
-	<imagecache>
-	</imagecache>
-	<div class="view">
-		<img src="" alt="">
-	</div>
+   <div class="site-header">
+     <div class="wrap">
+       <div class="site-logo">logo</div>
+     </div>
+   </div>
+   <div class="site-body">
+     <div class="wrap">
+       <div class="player">
+          <img class="player__target" src="current-image.jpg" data-role="player-overlay" aria-hidden="false">
+          <video class="player__target" data-role="player">
+            <source src="current-video.mp4">
+          </video>
+          <div class="controls">
+            <div class="controls__play-pause" data-role="player-play"></div>
+            <div class="controls__scrub"><input type="range"></div>
+          </div>
+          <div class="controls__player-close" data-role="player-close">x</div>
+       </div>
+     </div>
+   </div>
+   <div class="site-footer">
+     <div class="wrap">
+       footer
+     </div>
+   </div>
 
-	<button class="play">play/pause</button>
-  <form action="" onsubmit="goToFrame(this.querySelector('input').value);return false;"><input type="text" value=""><button>goto</button></form>
+   <script>
+    (function(){
 
-  <button onclick="setBackground(24)">day</button>
-  <button onclick="setBackground(48)">night</button>
-	<script>
+      // grab elements
+      var video = document.querySelector('[data-role="player"]');
+      var overlay = document.querySelector('[data-role="player-overlay"]');
+      var playButton = document.querySelector('[data-role="player-play"]');
+      var closePlayer = document.querySelector('[data-role="player-close"]');
 
-		var json = {
-			items: 48,
-			frames: [{"src":"http://e1.365dm.com/15/10/16-9/20/moeen-ali-james-anderson-pakistan-v-england_3366902.jpg?20151022093548"},{"src":"http://e1.365dm.com/15/09/16-9/30/louis-van-gaal-manchester-united-press-conference-champions-league_3357784.jpg?20150930083600"},{"src":"http://e0.365dm.com/15/10/16-9/30/form-team-stats_3367106.jpg?20151022165643"},{"src":"http://e2.365dm.com/15/10/16-9/30/rio-ferdinand-football-old-trafford_3367251.jpg?20151023073115"},{"src":"http://e2.365dm.com/15/09/16-9/30/football-pundit-paul-merson_3354482.jpg?20150922121814"},{"src":"http://e1.365dm.com/15/10/16-9/30/premier-league-preview-pellegrini-van-gaal-wenger-blog-managers_3366994.jpg?20151022124901"},{"src":"http://e1.365dm.com/15/10/16-9/30/hamilton-vettel-gossip_3362353.jpg?20151011144437"},{"src":"http://e1.365dm.com/15/10/16-9/30/jurgen-klopp-anfield-liverpool-rubin-kazan-europa-league_3367204.jpg?20151022213921"},{"src":"http://e1.365dm.com/15/08/16-9/30/lionel-messi-barcelona-uefa-super-cup_3336165.jpg?20150811202136"},{"src":"http://e0.365dm.com/15/10/16-9/30/kris-commons-angry-rant-celtic-molde-europa-league_3367217.jpg?20151022232316"},{"src":"http://e2.365dm.com/15/10/16-9/30/wayne-rooney-manchester-united_3365739.jpg?20151018232536"},{"src":"http://e1.365dm.com/15/10/16-9/30/diego-costa-chelsea-football_3367271.jpg?20151023082725"},{"src":"http://e2.365dm.com/15/10/16-9/30/jurgen-klopp-applauds-fans-applause-liverpool-anfield-rubin-kazan-europa-league_3367210.jpg?20151022223924"},{"src":"http://e1.365dm.com/15/10/16-9/30/marshawn-lynch-seattle-seahawks-nfl_3367233.jpg?20151023064628"},{"src":"http://e1.365dm.com/15/09/1-1/40/sergio-aguero-sky-sports-logo_3351298.jpg?20150915110529"},{"src":"http://e1.365dm.com/15/05/1-1/40/now-tv-ticket_3308261.jpg?20150526100350"},{"src":"http://e1.365dm.com/15/10/1-1/40/swoty-sportswomen-of-the-year-awards-logo-square_3366314.jpg?20151020145341"},{"src":"http://e1.365dm.com/15/09/1-1/40/webb-ellis-cup-england-fiji-world-rugby-twickenham_3355253.jpg?20150924131246"},{"src":"http://e2.365dm.com/15/05/1-1/40/sky-sports-audio-app_3309277.jpg?20150529110908"},{"src":"http://e1.365dm.com/15/10/1-1/40/sky-sports-channels-promo_3363878.jpg?20151014104035"},{"src":"http://e1.365dm.com/15/05/1-1/40/transfer-centre-promo_3309270.jpg?20150529104339"},{"src":"http://e0.365dm.com/15/10/16-9/30/FmbmVjeDqPyPkq-1XeyKkbFHkcXqZDpC.jpg"},{"src":"http://e2.365dm.com/15/10/16-9/30/V2bjhjeDrwYoQH5AI4RMAVGwroGnKpVD.jpg"},{"src":"http://e1.365dm.com/15/10/16-9/30/story-day_3366899.jpg?20151022092550"},{"src":"http://e2.365dm.com/15/10/16-9/30/dwMDVjeDpMR0veIAYgN_rnwNY7a-lgLt.jpg"},{"src":"http://e1.365dm.com/15/10/16-9/30/sky-bet-free-bet-football-league_3364094.jpg?20151015082116"},{"src":"http://e0.365dm.com/15/03/16-9/30/jeff-stelling-super-six-super6_3272411.jpg?20150821173158"},{"src":"http://e2.365dm.com/15/09/16-9/30/webb-ellis-cup-england-fiji-world-rugby-twickenham_3355253.jpg?20150924131246"},{"src":"http://e0.365dm.com/15/09/16-9/30/rooney-man-utd_3348580.jpg?20150914110721"},{"src":"http://e1.365dm.com/15/10/16-9/30/schmeichel-man-utd-man-city_3364437.jpg?20151016111216"},{"src":"http://e1.365dm.com/15/10/16-9/30/wg-grace-cricket-painting_3366601.jpg?20151021095019"},{"src":"http://e0.365dm.com/15/10/16-9/30/who-has-your-team-beaten-graphic-cover-wins-losses_3366793.jpg?20151021183725"},{"src":"http://e0.365dm.com/13/07/1-1/40/graeme-souness-football-expert-opinion_2976960.jpg?20130723112900"},{"src":"http://e1.365dm.com/13/07/1-1/40/paul-merson-football-expert-opinion_2977086.jpg?20130723152239"},{"src":"http://e0.365dm.com/14/09/1-1/40/jamie-moore-scribble_3201627.jpg?20140908154702"},{"src":"http://e1.365dm.com/13/08/1-1/40/martin-tyler-football-profile_2991318.jpg?20150325171001"}]
-		}
-		var playState = 1;
-		var currentFrame = 0;
-		// view frame
-		var view = document.querySelector('.view');
-		var viewFrame = view.querySelector('img');
+      function showOverlay(show){
+        if(show){
+          overlay.setAttribute('aria-hidden', 'false');
+        }
 
-    // live updating node list
-    var cache = document.getElementsByTagName('imagecache')[0]
-    var frames = cache.getElementsByTagName('img');
-
-    function setUp(){
-
-      cache.innerHTML = "";
-
-    	for(var i = -1;++i<json.items;){
-    		var img = new Image();
-    		if(json.frames[i]){
-    			img.src = json.frames[i].src;
-    		}
-    		else {
-    			img.src = "about:blank";
-    		}
-    		cache.appendChild(img);
-    		img.goTo = function(){
-    			viewFrame.src = this.src;
-    		}
-    	}
-
-    	if(playState === 1){
-  			goToFrame(json.frames.length-1);
-  			currentFrame = json.frames.length-1;
-  		}
-
-    }
-
-    function insertFrame(index, src){
-    	frames[index].src = src;
-    }
-
-
-    function goToFrame(index){
-      if(!frames[index]){
-        return;
+        else {
+          overlay.setAttribute('aria-hidden', 'true');
+        }
       }
-    	viewFrame.src = frames[index].src;
-    	currentFrame = index;
-    }
 
-    function play(){
+      function showPlaying(show){
+        if(show){
+          playButton.setAttribute('data-playing', true);
+        }
 
-    	if(currentFrame >= json.frames.length){
-        currentFrame = 0;
+        else {
+          playButton.setAttribute('data-playing', false);
+        }
       }
-    	if(playState === 2){
-    		frames[currentFrame].goTo();
-    		currentFrame++;
-    		
-    	}
 
-    	setTimeout(function(){
-	    	requestAnimationFrame(play);
-    	}, 333);
+      function closeVideo(){
+        showOverlay(true);
+        vide.pause();
+        showPlay(true);
+      }
 
-    }
+      // add click action
+      playButton.onclick = function(){
 
-    function setBackground(tick, speed){
-        speed = !isNaN(speed) ? speed : 2000;
-        var body = document.body;
-        body.style.transitionDuration = speed + 'ms';
-        document.body.setAttribute('data-background-transition', tick);
-    }
+        if(!video.paused){
+          video.pause();
+          showPlaying(false);
+          showOverlay(false);
+        }
+        else {
+          video.play();
+          showPlaying(true);
+          showOverlay(false);
+        }
+      }
 
-    document.querySelector('.play').onclick = function(){
-    	if(this.getAttribute('play') === '2'){
-    		playState = 1;
-    		this.setAttribute('play', 1);
-    	}
+      closePlayer.onclick = function(){
+        video.pause();
+        showOverlay(true);
+        showPlaying(false);
+      }
 
-    	else {
-    		playState = 2;
-    		this.setAttribute('play', 2);
-    	}
-    }
-
-    setUp();
-    play();
-
-    setInterval(function(){
-
-      setUp();
-
-    }, 10000)
-
-
-	</script>
+    })();
+   </script>
 </body>
 </html>

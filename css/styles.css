@@ -1,0 +1,130 @@
+/* STYLES.CSS */
+/*===================*/
+
+/*reset*/
+* {
+  padding: 0;
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: none;
+  -webkit-touch-callout: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-touch-action: manipulation!important;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-tap-highlight-color: transparent;
+  font: 1em/1.45 sans-serif;
+  overflow-y: scroll;
+  background: #222;
+}
+
+body {
+  overflow: hidden;
+  background: #eee;
+  color: #222;
+  text-align: center;
+}
+
+a {
+  -webkit-touch-callout: default;
+  -ms-touch-action: auto;
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 24px;
+  padding: 3vw;
+}
+
+/*video player*/
+.player {
+  background: hotpink;
+  position: relative;
+  padding-bottom: 38%;
+  overflow: hidden
+}
+
+.player__target {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 0;
+  z-index: 2;
+}
+
+.player__target[aria-hidden="true"]{
+  visibility: hidden;
+}
+
+.controls {
+  z-index: 3;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.controls__play-pause {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  width: 50px;
+  background: green;
+}
+
+.controls__play-pause[data-playing="true"]{
+  background: red;
+}
+
+.controls__scrub {
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  height: 20px;
+  margin-top: -10px;
+  width: calc(100% - 60px);
+  background: limegreen;
+}
+
+img.player__target {
+  z-index: 3;
+}
+
+.controls__player-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background: red;
+  color: white;
+}
+
+/*color themes*/
+.tick-1 > body,
+.tick-6 > body {
+  background: #222;
+}
+
+.tick-2 > body {
+  background: ;
+}
+
+@media all and (max-width: 600px){
+  .player {
+    padding-bottom: 50%;
+  }
+}
