@@ -19,7 +19,7 @@ html {
   -ms-touch-action: manipulation!important;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   -webkit-tap-highlight-color: transparent;
-  font: 1em/1.45 sans-serif;
+  font: 1em/1.45 skytext, sans-serif;
   overflow-y: scroll;
   background: #222;
 }

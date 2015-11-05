@@ -8,6 +8,7 @@
       <meta name=viewport content="width=device-width, initial-scale=1">
       <meta name=apple-mobile-web-app-capable content=yes>
       <meta name=description content="Sky@Leeds Dock - The story so far">
+
       <meta property=og:title content="Sky@Leeds Dock - The story so far">
       <meta property=og:type content="Sky@Leeds Dock - The story so far">
       <meta property=og:url content="Sky@Leeds Dock - The story so far">
@@ -15,6 +16,7 @@
       <meta property=og:description content="Sky@Leeds Dock - The story so far">
       <meta property=og:locale content="en_UK">
       <meta property=og:site_name content="Sky@Leeds Dock - The story so far">
+
       <meta name=twitter:card content=summary>
       <meta name=twitter:description content="Sky@Leeds Dock - The story so far">
       <meta name=twitter:title content="Sky@Leeds Dock - The story so far">
@@ -23,33 +25,78 @@
       <meta name=twitter:image:src content="Sky@Leeds Dock - The story so far">
       <meta name=twitter:creator content="Sky@Leeds Dock - The story so far">
   
-      <link rel="shortcut icon" href=/img/favicon.ico type=image/x-icon>
-      <link rel=apple-touch-icon sizes=57x57 href=/img/apple-touch-icon-57x57.png>
-      <link rel=apple-touch-icon sizes=60x60 href=/img/apple-touch-icon-60x60.png>
-      <link rel=apple-touch-icon sizes=72x72 href=/img/apple-touch-icon-72x72.png>
-      <link rel=apple-touch-icon sizes=76x76 href=/img/apple-touch-icon-76x76.png>
-      <link rel=apple-touch-icon sizes=114x114 href=/img/apple-touch-icon-114x114.png>
-      <link rel=apple-touch-icon sizes=120x120 href=/img/apple-touch-icon-120x120.png>
-      <link rel=apple-touch-icon sizes=144x144 href=/img/apple-touch-icon-144x144.png>
-      <link rel=apple-touch-icon sizes=152x152 href=/img/apple-touch-icon-152x152.png>
-      <link rel=apple-touch-icon sizes=180x180 href=/img/apple-touch-icon-180x180.png>
-      <link rel=icon type=image/png href=/img/favicon-16x16.png sizes=16x16>
-      <link rel=icon type=image/png href=/img/favicon-32x32.png sizes=32x32>
-      <link rel=icon type=image/png href=/img/favicon-96x96.png sizes=96x96>
-      <link rel=icon type=image/png href=/img/android-chrome-192x192.png sizes=192x192>
-      <meta name=msapplication-square70x70logo content=/img/smalltile.png>
-      <meta name=msapplication-square150x150logo content=/img/mediumtile.png>
-      <meta name=msapplication-wide310x150logo content=/img/widetile.png>
-      <meta name=msapplication-square310x310logo content=/img/largetile.png>
+      <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+      <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+      <style data-webfont="css/fonts.css"></style>
 
       <link rel="stylesheet" href="css/styles.css">
       <script>
+
         (function(){
-          var date = new Date();
-          var hour = date.getHours();
-          var tick = Math.ceil(hour / 4);
-          document.documentElement.className += ' tick-' + tick;
-        })()
+
+          // set background theme
+          function setTick(){
+            var date = new Date();
+            var hour = date.getHours();
+            var tick = Math.ceil(hour / 4);
+            document.documentElement.className += ' tick-' + tick;
+          }
+
+          // get font
+          function getFont(){
+
+            var style = document.querySelector('[data-webfont]');
+            var xhr;
+
+            if(!style){
+              return;
+            }
+
+            var name = style.getAttribute('data-webfont');
+            var localFont = window.localStorage.getItem(name);
+
+            if(!localFont){
+              xhr = new XMLHttpRequest();
+              xhr.onreadystatechange = function(){
+                if(4 === this.readyState && 200 === this.status){
+                  localFont = this.responseText;
+                  style.textContent = localFont;
+                  window.localStorage.setItem(name, localFont);
+                }
+              }
+
+              xhr.open("GET", name);
+              xhr.send();
+              
+            }
+
+            // set css font
+            style.textContent = localFont;
+
+          }
+
+          setTick();
+          setInterval(setTick, 100000);
+          getFont();
+
+        })();
+        
+
       </script>
 </head>
 <body>
@@ -68,7 +115,7 @@
 
           <img class="player__target player__overlay-image" src="current-image.jpg" data-role="player-overlay" aria-hidden="false">
 
-          <video class="player__target" data-role="player">
+          <video class="player__target" data-role="player" preload>
             <source src="current-video.mp4">
           </video>
           <div class="controls">
