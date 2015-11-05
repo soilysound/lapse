@@ -360,8 +360,8 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .site-body__social-cell > svg {
-  width: 82px;
-  height: 82px;
+  width: 76px;
+  height: 76px;
   fill: white;
   filter: none;
   -webkit-filter: none;
