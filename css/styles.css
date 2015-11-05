@@ -52,6 +52,10 @@ a {
   padding: 3vw;
 }
 
+.player-body > .wrap {
+  padding: 0;
+}
+
 /*video player*/
 .player {
   background: black;
@@ -300,7 +304,5 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 @media all and (max-width: 480px){
-  .site-body > .wrap {
-    padding: 0;
-  }
+ 
 }
