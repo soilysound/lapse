@@ -127,7 +127,7 @@
   };
 
   video.onended = function(){
-    playerScrub.value = 0;
+    //playerScrub.value = 0;
     showPlaying(false);
   };
 

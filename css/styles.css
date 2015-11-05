@@ -62,8 +62,9 @@ h1 {
 }
 
 h2 {
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: 200;
+  color: #666;
 }
 
 /*video player*/
@@ -120,9 +121,10 @@ svg[aria-hidden="true"] {
 /*player controls*/
 .controls {
   position: absolute;
-  bottom: 0;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
   height: 40px;
-  width: 100%;
   background: rgba(0,0,0,0.5);
   z-index: 3;
 }
@@ -154,8 +156,8 @@ svg[aria-hidden="true"] {
 
 svg {
   fill: white;
-  -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.6));
-  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.6))
+  -webkit-filter: drop-shadow(0 0 1px rgba(0,0,0,0.6));
+  filter: drop-shadow(0 0 1px rgba(0,0,0,0.6))
 }
 
 .controls__play-pause > svg[aria-hidden="true"]{
@@ -165,7 +167,7 @@ svg {
 .controls__scrub {
   position: absolute;
   left: 50px;
-  bottom: 14px;
+  bottom: 17px;
   height: 20px;
   width: calc(100% - 110px);
   z-index: 2;
@@ -183,19 +185,20 @@ svg {
   width: 30px;
   height: 30px;
   color: white;
-  cursor: pointer
+  cursor: pointer;
+  visibility: hidden;
+  display: none
 }
 
 .controls__time {
   position: absolute;
-  left: 12px;
-  top: 12px;
-  background: rgba(0,0,0,0.5);
+  left: 1em;
+  top: 1em;
   color: white;
   font-size: 1em;
   line-height: 1;
-  padding: 0.4em 1em;
   z-index: 4;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
 }
 
 /*input range style*/
@@ -214,13 +217,11 @@ input[type=range]::-webkit-slider-runnable-track {
   height: 5px;
   cursor: pointer;
   animate: 0.2s;
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.8);
   background: #aaa;
   border: 0;
 }
 
 input[type=range]::-webkit-slider-thumb {
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
   height: 12px;
   width: 12px;
   border-radius: 50%;
@@ -231,7 +232,6 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]::-moz-range-thumb {
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
   height: 12px;
   width: 12px;
   border-radius: 50%;
@@ -240,7 +240,6 @@ input[type=range]::-moz-range-thumb {
 }
 
 input[type=range]::-ms-thumb {
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
   height: 12px;
   width: 12px;
   border-radius: 50%;
@@ -253,7 +252,6 @@ input[type=range]::-moz-range-track {
   height: 5px;
   cursor: pointer;
   animate: 0.2s;
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.8);
   background: #aaa;
   border: 0;
 }
@@ -295,8 +293,10 @@ input[type=range]:focus::-ms-fill-upper {
 /*color themes*/
 .site-body {
   color: white;
-  padding-bottom: 48px;
-  padding-bottom: 15vw;
+  padding-top: 32px;
+  padding-bottom: 60px;
+  padding-top: 3.5vw;
+  padding-bottom: 14vw;
 }
 
 .tick-1 > body > .site-body,
@@ -350,7 +350,7 @@ input[type=range]:focus::-ms-fill-upper {
 /*social*/
 .site-body__social {
   display: inline-table;
-
+  margin-bottom: 1em
 }
 
 .site-body__social-cell {
@@ -368,8 +368,44 @@ input[type=range]:focus::-ms-fill-upper {
   margin: 1em 1.2em;
 }
 
+.site-body__social-head {
+  font-size: 2em;
+  margin-bottom: 0.4em
+}
+
 .site-body__social-tag {
-  font-size: 1.4em;
+  font-size: 1.8em;
+}
+
+.glint {
+  position: relative;
+}
+
+.glint:before,
+.glint:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 46px;
+  background-image: url(/_sandbox/polaris/flare_3.png);
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glint:before {
+  top: 0;
+  height: 100%;
+  border-top: 5px solid rgba(255,255,255,0.2);
+  background-position: -5% -25px;
+}
+
+.glint:after {
+  bottom: 0;
+  border-bottom: 5px solid rgba(255,255,255,0.2);
+  background-position: 105% 30px;
 }
 
 @media all and (max-width: 900px){
@@ -391,8 +427,10 @@ input[type=range]:focus::-ms-fill-upper {
   .wrap {
     margin: 0 auto;
     /*max-width: 1200px;*/
-    padding: 36px 18px;
-    padding: 6.5vw 3vw;
+    padding-top: 24px;
+    padding-bottom: 40px;
+    padding-top: 4vw;
+    padding-bottom: 7vw;
   }
 
   .site-body__social-cell > svg {
@@ -403,6 +441,10 @@ input[type=range]:focus::-ms-fill-upper {
 
   .site-body__social-tag {
     font-size: 1.2em;
+  }
+
+  .site-body__social-head {
+    font-size: 1.5em;
   }
 }
 
