@@ -66,7 +66,10 @@
             <source src="current-video.mp4">
           </video>
           
-            <div class="controls__play-pause" data-role="player-play"></div>
+            <div class="controls__play-pause" data-role="player-play">
+              <svg xmlns="http://www.w3.org/2000/svg" class="controls__play-icon" width="100%" height="100%" viewBox="0 0 384 384"><path d="M255.445 182.742l-66.188-65.906c-10.207-10.172-25.113-22.23-38.01-9.363v168.844c12.896 12.867 27.803.809 38.01-9.363l66.188-65.906c5.063-5.052 5.063-13.255 0-18.306z"/></svg>
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="controls__pause-icon" width="100%" height="100%" viewBox="0 0 384 384"><path d="M234.75 286.137c-3.422 0-6.797-.164-10.125-.492-3.328-.316-5.836-.691-7.547-1.113v-163.067c0-4.277 1.336-7.863 4.008-10.77 2.684-2.883 7.453-4.324 14.309-4.324 3.422 0 6.809.164 10.125.469 3.316.328 5.836.703 7.559 1.137v163.043c0 4.289-1.348 7.887-4.031 10.77-2.673 2.882-7.443 4.347-14.298 4.347zm-84 0c-3.428 0-6.803-.164-10.119-.492-3.328-.316-5.842-.691-7.559-1.113v-163.067c0-4.277 1.336-7.863 4.02-10.77 2.678-2.883 7.441-4.324 14.303-4.324 3.422 0 6.803.164 10.125.469 3.316.328 5.836.703 7.553 1.137v163.043c0 4.289-1.342 7.887-4.02 10.77s-7.448 4.347-14.303 4.347z"/></svg>
+            </div>
             <div class="controls__scrub">
               <input type="range" value="0" data-role="player-scrub">
             </div>
@@ -81,117 +84,6 @@
      </div>
    </div>
 
-   <script>
-    (function(){
-
-      // grab elements
-      var video = document.querySelector('[data-role="player"]');
-      var overlay = document.querySelector('[data-role="player-overlay"]');
-      var playButton = document.querySelector('[data-role="player-play"]');
-      var closePlayerButton = document.querySelector('[data-role="player-close"]');
-      var playerScrub = document.querySelector('[data-role="player-scrub"]');
-      var playerComplete = 0;
-
-      var hasTouch = ('ontouchstart' in window) || (('DocumentTouch' in window) && document instanceof window.DocumentTouch);
-      var touchdown = hasTouch ? 'ontouchstart' : 'onmousedown';
-      var touchoff = hasTouch ? 'ontouchend' : 'onmouseup';
-
-      function showOverlay(show){
-        if(show){
-          overlay.setAttribute('aria-hidden', 'false');
-        }
-
-        else {
-          overlay.setAttribute('aria-hidden', 'true');
-        }
-      }
-
-      function showPlaying(show){
-        if(show){
-          playButton.setAttribute('data-playing', true);
-        }
-
-        else {
-          playButton.setAttribute('data-playing', false);
-        }
-      }
-
-      function closeVideo(){
-        showOverlay(true);
-        vide.pause();
-        showPlay(true);
-      }
-
-      // add click action
-      playButton.onclick = function(){
-
-        if(!video.paused){
-          video.pause();
-          showPlaying(false);
-          showOverlay(false);
-        }
-        else {
-          video.play();
-          showPlaying(true);
-          showOverlay(false);
-        }
-      }
-
-      closePlayerButton.onclick = function(){
-        video.pause();
-        showOverlay(true);
-        showPlaying(false);
-      }
-
-      // fullScreenButton.onclick = function() {
-      //   if (video.requestFullscreen) {
-      //     video.requestFullscreen();
-      //   } else if (video.mozRequestFullScreen) {
-      //     video.mozRequestFullScreen(); // Firefox
-      //   } else if (video.webkitRequestFullscreen) {
-      //     video.webkitRequestFullscreen(); // Chrome and Safari
-      //   }
-      // };
-
-
-      playerScrub.oninput = function(){
-        
-        // Calculate the new time
-        var time = video.duration * (this.value / 100);
-
-        // Update the video time
-        video.currentTime = time;
-      }
-
-      playerScrub[touchdown] = function(){
-
-        if(!video.paused){
-          video.setAttribute('was-playing', true);
-        }
-        video.pause();
-      }
-
-      playerScrub[touchoff] = function(){
-        if(video.getAttribute('was-playing')){
-          video.play();
-          video.removeAttribute('was-playing');
-        }
-      }
-
-      video.ontimeupdate = function() {
-        // Calculate the slider value
-        var value = (100 / video.duration) * video.currentTime;
-
-        // Update the slider value
-        playerScrub.value = value;
-      };
-
-      video.onended = function(){
-        playerScrub.value = 0;
-        showPlaying(false);
-      }
-
-    })();
-   </script>
+   <script src="js/script.js"></script>
 </body>
 </html>

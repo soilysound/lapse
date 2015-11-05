@@ -1,4 +1,4 @@
-/* STYLES.CSS */
+/*PROJECT LAPSE STYLES*/
 /*===================*/
 
 /*reset*/
@@ -82,6 +82,10 @@ a {
 
 .controls__play-pause[data-playing="true"]{
   background: red;
+}
+
+.controls__play-pause > svg[aria-hidden="true"]{
+  display: none;
 }
 
 .controls__scrub {
@@ -206,16 +210,25 @@ input[type=range]:focus::-ms-fill-upper {
 /*color themes*/
 .tick-1 > body,
 .tick-6 > body {
-  background: #222;
+  background: purple;
 }
 
 .tick-2 > body {
-  background: ;
+  background: darkgoldenrod
+}
+
+.tick-3 > body {
+  background: white
+}
+
+.tick-4 > body,
+.tick-5 > body {
+  background: yellow;
 }
 
 @media all and (max-width: 600px){
   .player {
-    padding-bottom: 50%;
+    padding-bottom: 56.25%;
   }
 }
 
