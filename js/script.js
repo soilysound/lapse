@@ -8,7 +8,7 @@
   var playButton = document.querySelector('[data-role="player-play"]');
   var closePlayerButton = document.querySelector('[data-role="player-close"]');
   var playerScrub = document.querySelector('[data-role="player-scrub"]');
-  var playerComplete = 0;
+  var playerTime = document.querySelector('[data-role="player-time"]');
 
   var hasTouch = ('ontouchstart' in window) || (('DocumentTouch' in window) && document instanceof window.DocumentTouch);
   var touchdown = hasTouch ? 'ontouchstart' : 'onmousedown';
@@ -101,11 +101,14 @@
   };
 
   video.ontimeupdate = function() {
-    // Calculate the slider value
+    // calculate the slider value
     var value = (100 / video.duration) * video.currentTime;
 
-    // Update the slider value
+    // update the slider value
     playerScrub.value = value;
+
+    // update time
+    playerTime.textContent = "Day " + Math.max(1, Math.ceil(video.currentTime));
   };
 
   video.onended = function(){

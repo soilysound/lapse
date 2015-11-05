@@ -76,12 +76,12 @@ a {
   bottom: 0;
   width: 50px;
   height: 50px;
-  background: green;
   z-index: 3;
+  cursor: pointer
 }
 
-.controls__play-pause[data-playing="true"]{
-  background: red;
+.controls__play-pause > svg {
+  fill: white;
 }
 
 .controls__play-pause > svg[aria-hidden="true"]{
@@ -91,10 +91,9 @@ a {
 .controls__scrub {
   position: absolute;
   left: 60px;
-  bottom: 10px;
+  bottom: 15px;
   height: 20px;
-  margin-top: -10px;
-  width: calc(100% - 60px);
+  width: calc(100% - 72px);
   z-index: 2;
 }
 
@@ -109,12 +108,24 @@ img.player__target {
 
 .controls__player-close {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 12px;
+  right: 12px;
   width: 30px;
   height: 30px;
   background: red;
   color: white;
+  cursor: pointer
+}
+
+.controls__time {
+  position: absolute;
+  right: 12px;
+  bottom: 50px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 1em;
+  line-height: 1;
+  padding: 0.4em 1em;
 }
 
 /*input range style*/
