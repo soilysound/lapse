@@ -295,7 +295,8 @@ input[type=range]:focus::-ms-fill-upper {
 /*color themes*/
 .site-body {
   color: white;
-  padding-bottom: 5em;
+  padding-bottom: 48px;
+  padding-bottom: 15vw;
 }
 
 .tick-1 > body > .site-body,
@@ -393,6 +394,16 @@ input[type=range]:focus::-ms-fill-upper {
     padding: 36px 18px;
     padding: 6.5vw 3vw;
   }
+
+  .site-body__social-cell > svg {
+    width: 62px;
+    height: 62px;
+    margin: 1em 0.7em;
+  }
+
+  .site-body__social-tag {
+    font-size: 1.2em;
+  }
 }
 
 @media all and (max-width: 480px){
@@ -403,6 +414,12 @@ input[type=range]:focus::-ms-fill-upper {
 
   h1 {
     font-size: 1.9em;
+  }
+
+  .site-body__social-cell > svg {
+    width: 46px;
+    height: 46px;
+    margin: 1em 0.5em;
   }
 
 }
