@@ -295,39 +295,53 @@ input[type=range]:focus::-ms-fill-upper {
   color: white;
 }
 
-.tick-1 > body > .site-body {
+.tick-1 > body > .site-body,
+.tick-1 h1 {
   background: #004199;
   background: linear-gradient(to right, #004199 0%, #652679 100%);
 }
 
-.tick-2 > body > .site-body {
+.tick-2 > body > .site-body,
+.tick-2 h1 {
   background: #a9237a;
   background: linear-gradient(to right, #a9237a 0%, #e8007e 100%);
 }
 
-.tick-3 > body > .site-body {
+.tick-3 > body > .site-body,
+.tick-3 h1 {
   background: #e8007e;
   background: linear-gradient(to right, #e8007e 0%, #f28300 100%);
 }
 
-.tick-4 > body > .site-body {
+.tick-4 > body > .site-body,
+.tick-4 h1 {
   background: #e60000;
   background: linear-gradient(to right, #e60000 0%, #f28300 100%);
+  color: purple;
 }
 
-.tick-5 > body > .site-body {
+.tick-5 > body > .site-body,
+.tick-5 h1 {
   background: #f28300;
   background: linear-gradient(to right, #f28300 0%, #e8007e 100%);
 }
 
-.tick-6 > body > .site-body {
+.tick-6 > body > .site-body,
+.tick-6 h1 {
   background: #e8007e;
   background: linear-gradient(to right, #e8007e 0%, #a9237a 100%);
+
 }
 
-.tick-7 > body > .site-body {
+.tick-7 > body > .site-body,
+.tick-7 h1 {
   background: #652679;
   background: linear-gradient(to right, #652679 0%, #004199 100%);
+}
+
+h1 {
+  -webkit-background-clip: text!important;
+  -webkit-text-fill-color: transparent!important;
 }
 
 .site-footer__logo {
