@@ -80,10 +80,10 @@ svg[aria-hidden="true"] {
 }
 
 .player__overlay {
-  width: 20%;
-  height: 20%;
-  max-height: 80px;
-  max-width: 80px;
+  width: 25%;
+  height: 25%;
+  max-height: 90px;
+  max-width: 90px;
   pointer-events: none;
   position: absolute;
   left: 50%;
