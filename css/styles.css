@@ -34,7 +34,6 @@ body, div, img, svg {
 
 body {
   overflow: hidden;
-  background: #eee;
   color: #222;
   text-align: center;
 }
@@ -55,7 +54,7 @@ a {
 
 /*site header*/
 h1 {
-  font-size: 2.4em;
+  font-size: 3em;
   line-height: 1.2;
   font-weight: 200;
 }
@@ -292,22 +291,47 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 /*color themes*/
-.tick-1 > body > .site-body,
-.tick-6 > body > .site-body {
-  background: purple;
+.site-body {
+  color: white;
+}
+
+.tick-1 > body > .site-body {
+  background: #004199;
+  background: linear-gradient(to right, #004199 0%, #652679 100%);
 }
 
 .tick-2 > body > .site-body {
-  background: darkgoldenrod
+  background: #a9237a;
+  background: linear-gradient(to right, #a9237a 0%, #e8007e 100%);
 }
 
 .tick-3 > body > .site-body {
-  background: white
+  background: #e8007e;
+  background: linear-gradient(to right, #e8007e 0%, #f28300 100%);
 }
 
-.tick-4 > body > .site-body,
+.tick-4 > body > .site-body {
+  background: #e60000;
+  background: linear-gradient(to right, #e60000 0%, #f28300 100%);
+}
+
 .tick-5 > body > .site-body {
-  background: yellow;
+  background: #f28300;
+  background: linear-gradient(to right, #f28300 0%, #e8007e 100%);
+}
+
+.tick-6 > body > .site-body {
+  background: #e8007e;
+  background: linear-gradient(to right, #e8007e 0%, #a9237a 100%);
+}
+
+.tick-7 > body > .site-body {
+  background: #652679;
+  background: linear-gradient(to right, #652679 0%, #004199 100%);
+}
+
+.site-footer__logo {
+  width: 75px;
 }
 
 @media all and (max-width: 900px){
@@ -324,6 +348,13 @@ input[type=range]:focus::-ms-fill-upper {
   .player {
     padding-bottom: 56.25%;
   }
+
+  .wrap {
+    margin: 0 auto;
+    /*max-width: 1200px;*/
+    padding: 36px 18px;
+    padding: 5.5vw 3vw;
+  }
 }
 
 @media all and (max-width: 480px){
@@ -334,6 +365,10 @@ input[type=range]:focus::-ms-fill-upper {
 
   h1 {
     font-size: 1.6em;
+  }
+
+  .site-footer__logo {
+    width: 60px;
   }
 
 }
