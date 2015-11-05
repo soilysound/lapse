@@ -82,8 +82,8 @@ svg[aria-hidden="true"] {
 .player__overlay {
   width: 20%;
   height: 20%;
-  max-height: 60px;
-  max-width: 60px;
+  max-height: 80px;
+  max-width: 80px;
   pointer-events: none;
   position: absolute;
   left: 50%;
@@ -123,6 +123,7 @@ svg[aria-hidden="true"] {
 .controls__max {
   left: auto;
   right: 2px;
+  display: none;
 }
 
 .controls__max > svg{

@@ -16,6 +16,13 @@
   var touchdown = hasTouch ? 'ontouchstart' : 'onmousedown';
   var touchoff = hasTouch ? 'ontouchend' : 'onmouseup';
 
+  if (document.fullscreenEnabled || 
+    document.webkitFullscreenEnabled || 
+    document.msFullscreenEnabled ||
+    document.mozFullScreenEnabled) {
+    playerMax.style.display = "block";
+  } 
+
   function showOverlay(show){
     if(show){
       overlay.setAttribute('aria-hidden', 'false');
@@ -65,6 +72,7 @@
 
   playButton.onclick = playButtonClick;
   overlay.onclick = playButtonClick;
+  video.onclick = playButtonClick;
 
   closePlayerButton.onclick = function(){
     video.pause();
