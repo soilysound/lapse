@@ -55,6 +55,17 @@
             var hour = date.getHours();
             var tick = Math.ceil(hour / 3.4);
             document.documentElement.className += ' tick-' + tick;
+
+            // try and update image
+            var playerOverlay = document.querySelector('[data-role="player-overlay"]');
+            if(playerOverlay){
+              playerOverlay.src = playerOverlay.src;
+              var srcset =  playerOverlay.getAttribute('srcset');
+              if(srcset){
+                playerOverlay.setAttribute('srcset', srcset);
+              }
+            }
+
           }
 
           // get font
@@ -144,7 +155,7 @@
 
    <div class="site-body">
      <div class="wrap">
-      <h4 class="site-body__social-head">jobs.sky.com</h4>
+      <h4 class="site-body__social-head"><a href="http://jobs.sky.com" target="blank">jobs.sky.com</a></h4>
        <div class="site-body__social">
 
         <a href="https://www.linkedin.com/vsearch/j?rsid=492945921446734118857&keywords=workforsky&trk=vsrp_jobs_cluster_header&trkInfo=VSRPsearchId%3A492945921446734118857%2CVSRPcmpt%3Ajobs_cluster" target="blank" class="site-body__social-cell">
