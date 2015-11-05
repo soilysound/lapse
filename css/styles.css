@@ -54,9 +54,11 @@ a {
 
 /*site header*/
 h1 {
-  font-size: 3em;
+  font-size: 3.2em;
   line-height: 1.2;
-  font-weight: 200;
+  font-weight: 200;  
+  -webkit-background-clip: text!important;
+  -webkit-text-fill-color: transparent!important;
 }
 
 h2 {
@@ -96,8 +98,8 @@ svg[aria-hidden="true"] {
 }
 
 .player__overlay {
-  width: 25%;
-  height: 25%;
+  width: 30%;
+  height: 30%;
   max-height: 90px;
   max-width: 90px;
   pointer-events: none;
@@ -339,18 +341,14 @@ input[type=range]:focus::-ms-fill-upper {
   background: linear-gradient(to right, #652679 0%, #004199 100%);
 }
 
-h1 {
-  -webkit-background-clip: text!important;
-  -webkit-text-fill-color: transparent!important;
-}
-
 .site-footer__logo {
-  width: 75px;
+  height: 50px;
 }
 
 @media all and (max-width: 900px){
+  
   h1 {
-    font-size: 2em;
+    font-size: 2.8em;
   }
 
   h2 {
@@ -367,7 +365,7 @@ h1 {
     margin: 0 auto;
     /*max-width: 1200px;*/
     padding: 36px 18px;
-    padding: 5.5vw 3vw;
+    padding: 6.5vw 3vw;
   }
 }
 
@@ -378,11 +376,7 @@ h1 {
   }
 
   h1 {
-    font-size: 1.6em;
-  }
-
-  .site-footer__logo {
-    width: 60px;
+    font-size: 1.9em;
   }
 
 }
