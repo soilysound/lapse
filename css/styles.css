@@ -19,9 +19,10 @@ html {
   -ms-touch-action: manipulation!important;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   -webkit-tap-highlight-color: transparent;
-  font: 1em/1.45 skytext, sans-serif;
+  font: 20px/1.4 skytext, sans-serif;
   overflow-y: scroll;
-  background: #222;
+  background: #fff;
+  color: #222;
 }
 
 body, div, img, svg {
@@ -48,12 +49,20 @@ a {
 .wrap {
   margin: 0 auto;
   /*max-width: 1200px;*/
-  padding: 24px;
-  padding: 3vw;
+  padding: 36px 24px;
+  padding: 4vw 3vw;
 }
 
-.player-body > .wrap {
-  padding: 0;
+/*site header*/
+h1 {
+  font-size: 2.4em;
+  line-height: 1.2;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 1.4em;
+  font-weight: 200;
 }
 
 /*video player*/
@@ -62,6 +71,10 @@ a {
   position: relative;
   padding-bottom: 38%;
   overflow: hidden
+}
+
+.player-body > .wrap {
+  padding: 0;
 }
 
 .player__target {
@@ -279,22 +292,32 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 /*color themes*/
-.tick-1 > body,
-.tick-6 > body {
+.tick-1 > body > .site-body,
+.tick-6 > body > .site-body {
   background: purple;
 }
 
-.tick-2 > body {
+.tick-2 > body > .site-body {
   background: darkgoldenrod
 }
 
-.tick-3 > body {
+.tick-3 > body > .site-body {
   background: white
 }
 
-.tick-4 > body,
-.tick-5 > body {
+.tick-4 > body > .site-body,
+.tick-5 > body > .site-body {
   background: yellow;
+}
+
+@media all and (max-width: 900px){
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
 }
 
 @media all and (max-width: 600px){
@@ -304,5 +327,13 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 @media all and (max-width: 480px){
- 
+
+  html {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+
 }
