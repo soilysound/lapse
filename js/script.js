@@ -5,10 +5,12 @@
   // grab elements
   var video = document.querySelector('[data-role="player"]');
   var overlay = document.querySelector('[data-role="player-overlay"]');
+  var overlayIcon = document.querySelector('[data-role="player-overlay-icon"]');
   var playButton = document.querySelector('[data-role="player-play"]');
   var closePlayerButton = document.querySelector('[data-role="player-close"]');
   var playerScrub = document.querySelector('[data-role="player-scrub"]');
   var playerTime = document.querySelector('[data-role="player-time"]');
+  var playerMax = document.querySelector('[data-role="player-max"]');
 
   var hasTouch = ('ontouchstart' in window) || (('DocumentTouch' in window) && document instanceof window.DocumentTouch);
   var touchdown = hasTouch ? 'ontouchstart' : 'onmousedown';
@@ -17,10 +19,12 @@
   function showOverlay(show){
     if(show){
       overlay.setAttribute('aria-hidden', 'false');
+      overlayIcon.setAttribute('aria-hidden', 'false');
     }
 
     else {
       overlay.setAttribute('aria-hidden', 'true');
+      overlayIcon.setAttribute('aria-hidden', 'true');
     }
   }
 
@@ -45,7 +49,7 @@
   }
 
   // add click action
-  playButton.onclick = function(){
+ function playButtonClick(){
 
     if(!video.paused){
       video.pause();
@@ -57,7 +61,10 @@
       showPlaying(true);
       showOverlay(false);
     }
-  };
+  }
+
+  playButton.onclick = playButtonClick;
+  overlay.onclick = playButtonClick;
 
   closePlayerButton.onclick = function(){
     video.pause();
@@ -65,15 +72,15 @@
     showPlaying(false);
   };
 
-  // fullScreenButton.onclick = function() {
-  //   if (video.requestFullscreen) {
-  //     video.requestFullscreen();
-  //   } else if (video.mozRequestFullScreen) {
-  //     video.mozRequestFullScreen(); // Firefox
-  //   } else if (video.webkitRequestFullscreen) {
-  //     video.webkitRequestFullscreen(); // Chrome and Safari
-  //   }
-  // };
+  playerMax.onclick = function() {
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    } else if (video.mozRequestFullScreen) {
+      video.mozRequestFullScreen(); // Firefox
+    } else if (video.webkitRequestFullscreen) {
+      video.webkitRequestFullscreen(); // Chrome and Safari
+    }
+  };
 
 
   playerScrub.oninput = function(){
