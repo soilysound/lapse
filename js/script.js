@@ -4,6 +4,7 @@
 
   // grab elements
   var video = document.querySelector('[data-role="player"]');
+  var playerControls = document.querySelector('[data-role="player-controls"]');
   var overlay = document.querySelector('[data-role="player-overlay"]');
   var overlayIcon = document.querySelector('[data-role="player-overlay-icon"]');
   var playButton = document.querySelector('[data-role="player-play"]');
@@ -22,7 +23,15 @@
     document.msFullscreenEnabled ||
     document.mozFullScreenEnabled) {
     playerMax.style.display = "block";
-  } 
+  }
+
+  function showHTML5Controls(){
+    if(hasTouch){
+      video.setAttribute('controls', true);
+      playerControls.style.display = "none";
+
+    }
+  }
 
   function showOverlay(show){
     if(show){
@@ -139,6 +148,8 @@
   siteMapCover.parentNode.onmouseleave = function(){
     this.querySelector('div').style.pointerEvents = 'auto';
   };
+
+  showHTML5Controls();
 
 
 
