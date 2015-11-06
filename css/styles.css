@@ -296,7 +296,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .site-body > .wrap {
-  padding: 200px 24px 200px;
+  padding: 110px 36px;
   padding: 7vw 3vw;
 }
 
@@ -376,7 +376,10 @@ input[type=range]:focus::-ms-fill-upper {
 
 /*social*/
 .site-body__social {
-  display: inline-table;
+  display: table;
+  width: 66.6%;
+  max-width: 380px;
+  margin: 1.2em auto 4em;
 }
 
 .site-body__social-cell {
@@ -391,7 +394,6 @@ input[type=range]:focus::-ms-fill-upper {
   fill: white;
   filter: none;
   -webkit-filter: none;
-  margin: 0.75em 1em 4em;
 }
 
 .site-body__social-head {
@@ -457,7 +459,7 @@ input[type=range]:focus::-ms-fill-upper {
   z-index: 2;
 }
 
-@media all and (max-width: 1280px){
+@media all and (min-width: 1280px){
   
   .site-header > .wrap {
     padding: 44px 3vw;
@@ -473,6 +475,10 @@ input[type=range]:focus::-ms-fill-upper {
   h2 {
     font-size: 1em;
   }
+
+  .site-body > .wrap {
+    padding: 10vw 3vw;
+  }
 }
 
 @media all and (max-width: 600px){
@@ -484,11 +490,15 @@ input[type=range]:focus::-ms-fill-upper {
   .wrap {
     padding: 7vw 3vw;
   }
+  
+  .site-body__social {
+    max-width: 260px;
+    margin: 1em auto 2.2em;
+  }
 
   .site-body__social-cell > svg {
     width: 62px;
     height: 62px;
-    margin: 1em 0.7em;
   }
 
   .site-body__social-tag {
@@ -513,7 +523,6 @@ input[type=range]:focus::-ms-fill-upper {
   .site-body__social-cell > svg {
     width: 46px;
     height: 46px;
-    margin: 1em 0.5em;
   }
 
   .site-footer__logo {
