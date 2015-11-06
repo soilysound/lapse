@@ -10,8 +10,6 @@
   "author": "lapse@sky.uk",
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "inliner": "~1.4.0",
-    "html-minifier": "~1.0.0",
     "html-minify": "~0.3.1"
   }
 }
