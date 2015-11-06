@@ -124,7 +124,7 @@ svg[aria-hidden="true"] {
   left: 12px;
   right: 12px;
   height: 40px;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.6);
   z-index: 3;
 }
 
@@ -149,8 +149,8 @@ svg[aria-hidden="true"] {
   width: 60%;
   height: 60%;
   position: absolute;
-  left: 15%;
-  top: 15%;
+  left: 20%;
+  top: 20%;
 }
 
 svg {
@@ -205,6 +205,7 @@ input[type=range] {
   -webkit-appearance: none;
   margin: 0;
   width: 100%;
+  background: none;
 }
 
 input[type=range]:focus {
@@ -216,8 +217,9 @@ input[type=range]::-webkit-slider-runnable-track {
   height: 5px;
   cursor: pointer;
   animate: 0.2s;
-  background: #aaa;
+  background: rgba(100, 100, 102, 0.9);
   border: 0;
+  border-radius: 3px;
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -292,10 +294,13 @@ input[type=range]:focus::-ms-fill-upper {
 /*color themes*/
 .site-body {
   color: white;
-  padding-top: 7%;
-  padding-bottom: 7%;
   position: relative;
   z-index: 5;
+}
+
+.site-body > .wrap {
+  padding: 200px 24px 200px;
+  padding: 7vw 3vw;
 }
 
 .tick-1 > body > .site-body {
@@ -389,7 +394,7 @@ input[type=range]:focus::-ms-fill-upper {
   fill: white;
   filter: none;
   -webkit-filter: none;
-  margin: 1.5em 1.2em;
+  margin: 0.75em 1em 4em;
 }
 
 .site-body__social-head {
@@ -455,6 +460,12 @@ input[type=range]:focus::-ms-fill-upper {
   z-index: 2;
 }
 
+@media all and (max-width: 1280px){
+  
+  .site-header > .wrap {
+    padding: 44px 3vw;
+  }
+}
 
 @media all and (max-width: 900px){
   
