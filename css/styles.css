@@ -360,8 +360,8 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .site-body__social-cell > svg {
-  width: 18%;
-  /*height: 76px;*/
+  width: 76px;
+  height: 76px;
   fill: white;
   filter: none;
   -webkit-filter: none;
@@ -406,6 +406,28 @@ input[type=range]:focus::-ms-fill-upper {
  bottom: 0;
  border-bottom: 5px solid rgba(255,255,255,0.2);
  background-position: 105% 30px;
+}
+
+/*site map*/
+.site-map {
+  position: relative;
+  padding-bottom: 75%;
+}
+
+.site-map > iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+
+.site-map__cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
 }
 
 

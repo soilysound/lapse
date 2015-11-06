@@ -11,6 +11,7 @@
   var playerScrub = document.querySelector('[data-role="player-scrub"]');
   var playerTime = document.querySelector('[data-role="player-time"]');
   var playerMax = document.querySelector('[data-role="player-max"]');
+  var siteMapCover = document.querySelector('[data-role="site-map-cover"]');
 
   var hasTouch = ('ontouchstart' in window) || (('DocumentTouch' in window) && document instanceof window.DocumentTouch);
   var touchdown = hasTouch ? 'ontouchstart' : 'onmousedown';
@@ -130,5 +131,15 @@
     //playerScrub.value = 0;
     showPlaying(false);
   };
+
+  siteMapCover.onclick = function(){
+    this.style.pointerEvents = 'none';
+  };
+
+  siteMapCover.parentNode.onmouseleave = function(){
+    this.querySelector('div').style.pointerEvents = 'auto';
+  };
+
+
 
 })();
