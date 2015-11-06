@@ -4,8 +4,14 @@
   "description": "time lapse cam of leeds dock construction",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "sh ./scripts/compile.sh"
   },
   "author": "lapse@sky.uk",
-  "license": "BSD-2-Clause"
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "inliner": "~1.4.0",
+    "html-minifier": "~1.0.0",
+    "html-minify": "~0.3.1"
+  }
 }

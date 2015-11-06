@@ -69,9 +69,7 @@ h2 {
 
 /*video player*/
 .player {
-  background: black;
-  position: relative;
-  padding-bottom: 38%;
+  background: #222;
   overflow: hidden
 }
 
@@ -294,10 +292,10 @@ input[type=range]:focus::-ms-fill-upper {
 /*color themes*/
 .site-body {
   color: white;
-  padding-top: 32px;
-  padding-bottom: 60px;
-  padding-top: 3.5vw;
-  padding-bottom: 14vw;
+  padding-top: 7%;
+  padding-bottom: 7%;
+  position: relative;
+  z-index: 5;
 }
 
 .tick-1 > body > .site-body,
@@ -322,7 +320,6 @@ input[type=range]:focus::-ms-fill-upper {
 .tick-4 h1 {
   background: #e60000;
   background: linear-gradient(to right, #e60000 0%, #f28300 100%);
-  color: purple;
 }
 
 .tick-5 > body > .site-body,
@@ -335,7 +332,6 @@ input[type=range]:focus::-ms-fill-upper {
 .tick-6 h1 {
   background: #e8007e;
   background: linear-gradient(to right, #e8007e 0%, #a9237a 100%);
-
 }
 
 .tick-7 > body > .site-body,
@@ -409,9 +405,10 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 /*site map*/
+.player,
 .site-map {
   position: relative;
-  padding-bottom: 75%;
+  padding-bottom: 38%;
 }
 
 .site-map > iframe {
@@ -443,7 +440,8 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 @media all and (max-width: 600px){
-  .player {
+  .player,
+  .site-map {
     padding-bottom: 56.25%;
   }
 

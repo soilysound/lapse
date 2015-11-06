@@ -1,114 +1,51 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
    <head>
-      <meta charset=utf-8>
-      <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+      <meta charset="utf-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
       <title>Sky@Leeds Dock - The story so far</title>
 
-      <meta name=viewport content="width=device-width, initial-scale=1">
-      <meta name=apple-mobile-web-app-capable content=yes>
-      <meta name=description content="Sky@Leeds Dock - The story so far">
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <meta name="apple-mobile-web-app-capable" content="yes"/>
+      <meta name="description" content="Sky@Leeds Dock - The story so far"/>
 
-      <meta property=og:title content="Sky@Leeds Dock - The story so far">
-      <meta property=og:type content="webpage">
-      <meta property=og:url content="">
-      <meta property=og:image content="img/android-icon-192x192.png">
-      <meta property=og:description content="Follow the exciting development of Sky's new offices at Leeds Dock">
-      <meta property=og:locale content="en_UK">
-      <meta property=og:site_name content="Sky@Leeds Dock">
+      <meta property="og:title" content="Sky@Leeds Dock - The story so far"/>
+      <meta property="og:type" content="webpage"/>
+      <meta property="og:url" content=""/>
+      <meta property="og:image" content="img/android-icon-192x192.png"/>
+      <meta property="og:description" content="Follow the exciting development of Sky's new offices at Leeds Dock"/>
+      <meta property="og:locale" content="en_UK"/>
+      <meta property="og:site_name" content="Sky@Leeds Dock"/>
 
-      <meta name=twitter:card content="Follow the exciting development of Sky's new offices at Leeds Dock">
-      <meta name=twitter:description content="Follow the exciting development of Sky's new offices at Leeds Dock">
-      <meta name=twitter:title content="Sky@Leeds Dock - The story so far">
-      <meta name=twitter:site content="Sky@Leeds Dock">
-      <meta name=twitter:domain content="">
-      <meta name=twitter:image:src content="img/android-icon-192x192.png">
-      <meta name=twitter:creator content="Sky">
+      <meta name="twitter:card" content="Follow the exciting development of Sky's new offices at Leeds Dock"/>
+      <meta name="twitter:description" content="Follow the exciting development of Sky's new offices at Leeds Dock"/>
+      <meta name="twitter:title" content="Sky@Leeds Dock - The story so far"/>
+      <meta name="twitter:site" content="Sky@Leeds Dock"/>
+      <meta name="twitter:domain" content=""/>
+      <meta name="twitter:image:src" content="img/android-icon-192x192.png"/>
+      <meta name="twitter:creator" content="Sky"/>
 
-      <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-      <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
-      <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
-      <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-      <meta name="msapplication-TileColor" content="#ffffff">
-      <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
-      <meta name="theme-color" content="#ffffff">
+      <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+      <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png"/>
+      <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png"/>
+      <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png"/>
+      <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png"/>
+      <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png"/>
+      <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png"/>
+      <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png"/>
+      <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png"/>
+      <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png"/>
+      <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png"/>
+      <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"/>
+      <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png"/>
+      <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"/>
+      <meta name="msapplication-TileColor" content="#ffffff"/>
+      <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png"/>
+      <meta name="theme-color" content="#ffffff"/>
       <style data-webfont="css/fonts.css"></style>
 
-      <link rel="stylesheet" href="css/styles.css">
-      <script>
-
-        (function(){
-
-          // set background theme
-          function setTick(){
-            var date = new Date();
-            var hour = date.getHours();
-            var tick = Math.ceil(hour / 3.4);
-            document.documentElement.className += ' tick-' + tick;
-
-            // try and update image
-            var playerOverlay = document.querySelector('[data-role="player-overlay"]');
-            if(playerOverlay){
-              playerOverlay.src = playerOverlay.src;
-              var srcset =  playerOverlay.getAttribute('srcset');
-              if(srcset){
-                playerOverlay.setAttribute('srcset', srcset);
-              }
-            }
-
-          }
-
-          // get font
-          function getFont(){
-
-            var style = document.querySelector('[data-webfont]');
-            var xhr;
-
-            if(!style){
-              return;
-            }
-
-            var name = style.getAttribute('data-webfont');
-            var localFont = window.localStorage.getItem(name);
-
-            if(!localFont){
-              xhr = new XMLHttpRequest();
-              xhr.onreadystatechange = function(){
-                if(4 === this.readyState && 200 === this.status){
-                  localFont = this.responseText;
-                  style.textContent = localFont;
-                  window.localStorage.setItem(name, localFont);
-                }
-              }
-
-              xhr.open("GET", name);
-              xhr.send();
-
-            }
-
-            // set css font
-            style.textContent = localFont;
-
-          }
-
-          setTick();
-          setInterval(setTick, 100000);
-          getFont();
-
-        })();
-
-
-      </script>
+      <style>*{padding:0;margin:0;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}html{height:100%;-webkit-text-size-adjust:none;-webkit-touch-callout:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-ms-touch-action:manipulation!important;-ms-overflow-style:-ms-autohiding-scrollbar;-webkit-tap-highlight-color:transparent;font:20px/1.4 skytext,sans-serif;overflow-y:scroll;background:#fff;color:#222}body,div,img,svg{visibility:visible;opacity:1;-webkit-transition:opacity .1666s,color .1666s,background-color .1666s,fill .1666s;transition:opacity .1666s,color .1666s,background-color .1666s,fill .1666s}body{overflow:hidden;color:#222;text-align:center}a{-webkit-touch-callout:default;-ms-touch-action:auto;color:inherit;text-decoration:none}.wrap{margin:0 auto;padding:36px 24px;padding:4vw 3vw}h1{font-size:3.2em;line-height:1.2;font-weight:200;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important}h2{font-size:1.3em;font-weight:200;color:#666}.player{background:#222;overflow:hidden}.player-body>.wrap{padding:0}.player__target{position:absolute;height:100%;min-width:100%;left:50%;-ms-transform:translateX(-50%);-webkit-transform:translateX(-50%);transform:translateX(-50%);top:0;z-index:2;background:#000}div[aria-hidden=true],img[aria-hidden=true],svg[aria-hidden=true]{visibility:hidden;opacity:0}.player__overlay{width:30%;height:30%;max-height:90px;max-width:90px;pointer-events:none;position:absolute;left:50%;top:50%;-ms-transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);z-index:5}.player__overlay-image{cursor:pointer;z-index:4}.controls{position:absolute;bottom:12px;left:12px;right:12px;height:40px;background:rgba(0,0,0,.5);z-index:3}.controls__play-pause,.controls__max{position:absolute;height:100%;left:3px;bottom:0;width:40px;z-index:2;cursor:pointer}.controls__max{left:auto;right:2px;display:none}.controls__max>svg{width:60%;height:60%;position:absolute;left:15%;top:15%}svg{fill:#fff;-webkit-filter:drop-shadow(0 0 1px rgba(0,0,0,.6));filter:drop-shadow(0 0 1px rgba(0,0,0,.6))}.controls__play-pause>svg[aria-hidden=true]{display:none}.controls__scrub{position:absolute;left:50px;bottom:17px;height:20px;width:calc(100% - 110px);z-index:2}.controls__scrub>input{width:100%;position:relative}.controls__player-close{position:absolute;top:12px;right:12px;width:30px;height:30px;color:#fff;cursor:pointer;visibility:hidden;display:none}.controls__time{position:absolute;left:1em;top:1em;color:#fff;font-size:1em;line-height:1;z-index:4;text-shadow:1px 1px 1px rgba(0,0,0,.7)}input[type=range]{-webkit-appearance:none;margin:0;width:100%}input[type=range]:focus{outline:0}input[type=range]::-webkit-slider-runnable-track{width:100%;height:5px;cursor:pointer;animate:.2s;background:#aaa;border:0}input[type=range]::-webkit-slider-thumb{height:12px;width:12px;border-radius:50%;background:#fff;cursor:pointer;-webkit-appearance:none;margin-top:-4px}input[type=range]::-moz-range-thumb{height:12px;width:12px;border-radius:50%;background:#fff;cursor:pointer}input[type=range]::-ms-thumb{height:12px;width:12px;border-radius:50%;background:#fff;cursor:pointer}input[type=range]::-moz-range-track{width:100%;height:5px;cursor:pointer;animate:.2s;background:#aaa;border:0}input[type=range]::-ms-track{width:100%;height:8.4px;cursor:pointer;animate:.2s;background:transparent;border-color:transparent;border-width:16px 0;color:transparent}input[type=range]::-ms-fill-lower{background:#2a6495;border:.2px solid #010101;border-radius:2.6px;box-shadow:1px 1px 1px #000,0 0 1px #0d0d0d}input[type=range]::-ms-fill-upper{background:#3071a9;border:.2px solid #010101;border-radius:2.6px;box-shadow:1px 1px 1px #000,0 0 1px #0d0d0d}input[type=range]:focus::-ms-fill-lower{background:#3071a9}input[type=range]:focus::-ms-fill-upper{background:#367ebd}.site-body{color:#fff;padding-top:7%;padding-bottom:7%;position:relative;z-index:5}.tick-1>body>.site-body,.tick-1 h1{background:#004199;background:linear-gradient(to right,#004199 0,#652679 100%)}.tick-2>body>.site-body,.tick-2 h1{background:#a9237a;background:linear-gradient(to right,#a9237a 0,#e8007e 100%)}.tick-3>body>.site-body,.tick-3 h1{background:#e8007e;background:linear-gradient(to right,#e8007e 0,#f28300 100%)}.tick-4>body>.site-body,.tick-4 h1{background:#e60000;background:linear-gradient(to right,#e60000 0,#f28300 100%)}.tick-5>body>.site-body,.tick-5 h1{background:#f28300;background:linear-gradient(to right,#f28300 0,#e8007e 100%)}.tick-6>body>.site-body,.tick-6 h1{background:#e8007e;background:linear-gradient(to right,#e8007e 0,#a9237a 100%)}.tick-7>body>.site-body,.tick-7 h1{background:#652679;background:linear-gradient(to right,#652679 0,#004199 100%)}.site-footer__logo{height:50px}.site-body__social{display:inline-table}.site-body__social-cell{display:table-cell;vertical-align:middle;text-align:center}.site-body__social-cell>svg{width:76px;height:76px;fill:#fff;filter:none;-webkit-filter:none;margin:1.5em 1.2em}.site-body__social-head{font-size:2.2em;margin-bottom:.4em}.site-body__social-tag{font-size:1.7em}.glint{position:relative}.glint:before,.glint:after{content:"";display:block;position:absolute;right:0;left:0;height:46px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAaYAAAAuCAMAAABUO00wAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAkBQTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////88ydDgAAAL90Uk5TAAIEBggKDA4QEhQWFxkbHR8hIyUmKCosLjAxMzU3ODo8Pj9BQ0VGSEpLTU9QUlRVV1laXF1fYWJkZWdoamttbnBxc3R2d3l6fH1/gIGDhIaHiIqLjI6PkJKTlJaXmJmbnJ2eoKGio6Smp6ipqqutrq+wsbKztLW2uLm6u7y9vr/AwcLDxMXGx8jJysvMzc7P0NHS09TV1tfY2drb3N3e3+Dh4uPk5ebn6Onq6+zt7u/w8fLz9PX29/j5+vv8/f5PRMVMAAAIaElEQVR42u1c7Xajug7VlmzIef+HnYIt6f6QDYakTdozM+fS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);background-repeat:no-repeat;pointer-events:none;z-index:6}.glint:before{top:0;height:100%;border-top:5px solid rgba(255,255,255,.2);background-position:-5% -25px}.glint:after{bottom:0;border-bottom:5px solid rgba(255,255,255,.2);background-position:105% 30px}.player,.site-map{position:relative;padding-bottom:38%}.site-map>iframe{position:absolute;width:100%;height:100%;left:0}.site-map__cover{position:absolute;width:100%;height:100%;left:0;top:0;z-index:2}@media all and (max-width:900px){h1{font-size:2.8em}h2{font-size:1em}}@media all and (max-width:600px){.player,.site-map{padding-bottom:56.25%}.wrap{padding:7vw 3vw}.site-body__social-cell>svg{width:62px;height:62px;margin:1em .7em}.site-body__social-tag{font-size:1.2em}.site-body__social-head{font-size:1.5em}}@media all and (max-width:480px){html{font-size:18px}h1{font-size:1.9em}.site-body__social-cell>svg{width:46px;height:46px;margin:1em .5em}.site-footer__logo{height:40px}}</style>
+      <script>!function(){function t(){var t=new Date,e=t.getHours(),n=Math.ceil(e/3.4);document.documentElement.className+=" tick-"+n;var a=document.querySelector('[data-role="player-overlay"]');if(a){a.src=a.src;var o=a.getAttribute("srcset");o&&a.setAttribute("srcset",o)}}function e(){var t,e=document.querySelector("[data-webfont]");if(e){var n=e.getAttribute("data-webfont"),a=window.localStorage.getItem(n);a||(t=new XMLHttpRequest,t.onreadystatechange=function(){4===this.readyState&&200===this.status&&(a=this.responseText,e.textContent=a,window.localStorage.setItem(n,a))},t.open("GET",n),t.send()),e.textContent=a}}t(),setInterval(t,1e5),e()}();</script>
 </head>
 <body>
    <div class="site-header">
@@ -124,29 +61,34 @@
        <div class="player glint">
 
           <div class="player__overlay" data-role="player-overlay-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 384 384"><path d="M192 24.001c92.641 0 167.998 75.358 167.998 167.995s-75.357 168.002-167.998 168.002c-92.636 0-167.999-75.365-167.999-168.002 0-92.636 75.363-167.995 167.999-167.995m0-24.001c-106.036 0-192 85.957-192 191.996 0 106.047 85.964 192.004 192 192.004 106.035 0 192-85.957 192-192.004 0-106.039-85.965-191.996-192-191.996z"/><path d="M255.725 182.848l-66.186-65.91c-10.206-10.173-25.115-22.229-38.009-9.36v168.844c12.894 12.861 27.803.807 38.009-9.367l66.186-65.902c5.068-5.055 5.068-13.258 0-18.305z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 384 384"><path d="M192 24.001c92.641 0 167.998 75.358 167.998 167.995s-75.357 168.002-167.998 168.002c-92.636 0-167.999-75.365-167.999-168.002 0-92.636 75.363-167.995 167.999-167.995m0-24.001c-106.036 0-192 85.957-192 191.996 0 106.047 85.964 192.004 192 192.004 106.035 0 192-85.957 192-192.004 0-106.039-85.965-191.996-192-191.996z"></path>
+
+              <path d="M255.725 182.848l-66.186-65.91c-10.206-10.173-25.115-22.229-38.009-9.36v168.844c12.894 12.861 27.803.807 38.009-9.367l66.186-65.902c5.068-5.055 5.068-13.258 0-18.305z"></path>
+
+            </svg>
+
           </div>
 
-          <img class="player__target player__overlay-image" src="current-image.jpg" data-role="player-overlay" aria-hidden="false">
+          <img class="player__target player__overlay-image" src="current-image.jpg" data-role="player-overlay" aria-hidden="false"/>
 
-          <video class="player__target" data-role="player" preload>
+          <video class="player__target" data-role="player" preload="">
             <source src="1secDay.webm">
-          </video>
+          </source></video>
           <div class="controls">
             <div class="controls__play-pause" data-role="player-play">
-              <svg xmlns="http://www.w3.org/2000/svg" class="controls__play-icon" width="100%" height="100%" viewBox="0 0 384 384"><path d="M255.445 182.742l-66.188-65.906c-10.207-10.172-25.113-22.23-38.01-9.363v168.844c12.896 12.867 27.803.809 38.01-9.363l66.188-65.906c5.063-5.052 5.063-13.255 0-18.306z"/></svg>
-              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="controls__pause-icon" width="100%" height="100%" viewBox="0 0 384 384"><path d="M234.75 286.137c-3.422 0-6.797-.164-10.125-.492-3.328-.316-5.836-.691-7.547-1.113v-163.067c0-4.277 1.336-7.863 4.008-10.77 2.684-2.883 7.453-4.324 14.309-4.324 3.422 0 6.809.164 10.125.469 3.316.328 5.836.703 7.559 1.137v163.043c0 4.289-1.348 7.887-4.031 10.77-2.673 2.882-7.443 4.347-14.298 4.347zm-84 0c-3.428 0-6.803-.164-10.119-.492-3.328-.316-5.842-.691-7.559-1.113v-163.067c0-4.277 1.336-7.863 4.02-10.77 2.678-2.883 7.441-4.324 14.303-4.324 3.422 0 6.803.164 10.125.469 3.316.328 5.836.703 7.553 1.137v163.043c0 4.289-1.342 7.887-4.02 10.77s-7.448 4.347-14.303 4.347z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="controls__play-icon" width="100%" height="100%" viewbox="0 0 384 384"><path d="M255.445 182.742l-66.188-65.906c-10.207-10.172-25.113-22.23-38.01-9.363v168.844c12.896 12.867 27.803.809 38.01-9.363l66.188-65.906c5.063-5.052 5.063-13.255 0-18.306z"></svg>
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="controls__pause-icon" width="100%" height="100%" viewbox="0 0 384 384"><path d="M234.75 286.137c-3.422 0-6.797-.164-10.125-.492-3.328-.316-5.836-.691-7.547-1.113v-163.067c0-4.277 1.336-7.863 4.008-10.77 2.684-2.883 7.453-4.324 14.309-4.324 3.422 0 6.809.164 10.125.469 3.316.328 5.836.703 7.559 1.137v163.043c0 4.289-1.348 7.887-4.031 10.77-2.673 2.882-7.443 4.347-14.298 4.347zm-84 0c-3.428 0-6.803-.164-10.119-.492-3.328-.316-5.842-.691-7.559-1.113v-163.067c0-4.277 1.336-7.863 4.02-10.77 2.678-2.883 7.441-4.324 14.303-4.324 3.422 0 6.803.164 10.125.469 3.316.328 5.836.703 7.553 1.137v163.043c0 4.289-1.342 7.887-4.02 10.77s-7.448 4.347-14.303 4.347z"></svg>
             </div>
             <div class="controls__scrub">
-              <input type="range" value="0" data-role="player-scrub">
+              <input type="range" value="0" data-role="player-scrub"/>
             </div>
             <div class="controls__max" data-role="player-max">
-              <svg xmlns="http://www.w3.org/2000/svg" width="60%" height="60%" viewBox="0 0 384 384"><path d="M158.32 47.982l-2.432-.029h-95.923c-6.533 0-11.848 5.314-11.848 11.854v97.559l.018 1.213c.023 2.766.85 4.986 2.525 6.797 1.635 1.77 4.852 2.66 9.562 2.66 2.631 0 5.232-.123 7.787-.363 1.482-.146 2.754-.305 3.809-.475v-78.411l4.09 4.055 77.502 76.699c.855-.633 1.852-1.436 2.982-2.385 1.969-1.652 3.885-3.416 5.748-5.291 3.293-3.311 5.027-6.281 5.016-8.584-.006-2.361-.879-4.371-2.666-6.141l-72.14-71.378-4.131-4.107h78.68c.176-1.049.334-2.326.48-3.814.24-2.549.363-5.145.363-7.781 0-4.705-.896-7.928-2.66-9.568-1.793-1.66-4.008-2.48-6.762-2.51zM225.539 335.52l2.438.023h95.918c6.527 0 11.848-5.32 11.848-11.859v-97.547l-.023-1.219c-.023-2.766-.844-4.992-2.52-6.797-1.629-1.758-4.863-2.66-9.562-2.66-2.637 0-5.238.129-7.793.363-1.477.141-2.754.305-3.797.469v78.423l-4.102-4.055-77.508-76.711c-.844.633-1.84 1.441-2.977 2.391-1.969 1.652-3.879 3.422-5.742 5.297-3.293 3.305-5.027 6.281-5.016 8.578 0 2.367.879 4.371 2.66 6.141l72.141 71.379 4.137 4.113h-78.68c-.176 1.043-.328 2.32-.48 3.809-.246 2.543-.363 5.145-.363 7.781 0 4.699.891 7.934 2.66 9.574 1.792 1.651 4.007 2.471 6.761 2.507z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="60%" height="60%" viewbox="0 0 384 384"><path d="M158.32 47.982l-2.432-.029h-95.923c-6.533 0-11.848 5.314-11.848 11.854v97.559l.018 1.213c.023 2.766.85 4.986 2.525 6.797 1.635 1.77 4.852 2.66 9.562 2.66 2.631 0 5.232-.123 7.787-.363 1.482-.146 2.754-.305 3.809-.475v-78.411l4.09 4.055 77.502 76.699c.855-.633 1.852-1.436 2.982-2.385 1.969-1.652 3.885-3.416 5.748-5.291 3.293-3.311 5.027-6.281 5.016-8.584-.006-2.361-.879-4.371-2.666-6.141l-72.14-71.378-4.131-4.107h78.68c.176-1.049.334-2.326.48-3.814.24-2.549.363-5.145.363-7.781 0-4.705-.896-7.928-2.66-9.568-1.793-1.66-4.008-2.48-6.762-2.51zM225.539 335.52l2.438.023h95.918c6.527 0 11.848-5.32 11.848-11.859v-97.547l-.023-1.219c-.023-2.766-.844-4.992-2.52-6.797-1.629-1.758-4.863-2.66-9.562-2.66-2.637 0-5.238.129-7.793.363-1.477.141-2.754.305-3.797.469v78.423l-4.102-4.055-77.508-76.711c-.844.633-1.84 1.441-2.977 2.391-1.969 1.652-3.879 3.422-5.742 5.297-3.293 3.305-5.027 6.281-5.016 8.578 0 2.367.879 4.371 2.66 6.141l72.141 71.379 4.137 4.113h-78.68c-.176 1.043-.328 2.32-.48 3.809-.246 2.543-.363 5.145-.363 7.781 0 4.699.891 7.934 2.66 9.574 1.792 1.651 4.007 2.471 6.761 2.507z"></svg>
             </div>
           </div>
 
           <div class="controls__player-close" data-role="player-close">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 384 384"><path d="M294.647 281.098c-.094-2.426-1.055-4.465-3.023-6.445l-78.41-78.41-4.242-4.243 4.242-4.242 84.375-84.375c-.398-.492-.844-1.043-1.348-1.652-2.004-2.426-4.16-4.805-6.434-7.078-4.605-4.605-7.359-5.297-8.602-5.297-2.531.094-4.594 1.055-6.562 3.023l-78.398 78.41-4.242 4.242-4.248-4.242-84.369-84.375c-.504.398-1.061.855-1.676 1.359-2.432 2.004-4.816 4.172-7.061 6.422-3.445 3.445-5.379 6.621-5.297 8.707.094 2.426 1.055 4.477 3.018 6.445l78.416 78.41 4.242 4.242-4.242 4.242-84.375 84.375c.398.504.844 1.066 1.348 1.676 2.016 2.438 4.184 4.816 6.428 7.066 4.617 4.605 7.365 5.297 8.59 5.297 2.543-.094 4.594-1.055 6.562-3.023l78.416-78.422 4.248-4.242 4.242 4.242 84.375 84.375c.492-.387 1.055-.844 1.652-1.336 2.426-1.992 4.805-4.148 7.09-6.434 3.434-3.432 5.367-6.62 5.285-8.717z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 384 384"><path d="M294.647 281.098c-.094-2.426-1.055-4.465-3.023-6.445l-78.41-78.41-4.242-4.243 4.242-4.242 84.375-84.375c-.398-.492-.844-1.043-1.348-1.652-2.004-2.426-4.16-4.805-6.434-7.078-4.605-4.605-7.359-5.297-8.602-5.297-2.531.094-4.594 1.055-6.562 3.023l-78.398 78.41-4.242 4.242-4.248-4.242-84.369-84.375c-.504.398-1.061.855-1.676 1.359-2.432 2.004-4.816 4.172-7.061 6.422-3.445 3.445-5.379 6.621-5.297 8.707.094 2.426 1.055 4.477 3.018 6.445l78.416 78.41 4.242 4.242-4.242 4.242-84.375 84.375c.398.504.844 1.066 1.348 1.676 2.016 2.438 4.184 4.816 6.428 7.066 4.617 4.605 7.365 5.297 8.59 5.297 2.543-.094 4.594-1.055 6.562-3.023l78.416-78.422 4.248-4.242 4.242 4.242 84.375 84.375c.492-.387 1.055-.844 1.652-1.336 2.426-1.992 4.805-4.148 7.09-6.434 3.434-3.432 5.367-6.62 5.285-8.717z"></svg>
           </div>
           <div class="controls__time" data-role="player-time">Day 33</div>
        </div>
@@ -159,14 +101,14 @@
        <div class="site-body__social">
 
         <a href="https://www.linkedin.com/vsearch/j?rsid=492945921446734118857&keywords=workforsky&trk=vsrp_jobs_cluster_header&trkInfo=VSRPsearchId%3A492945921446734118857%2CVSRPcmpt%3Ajobs_cluster" target="blank" class="site-body__social-cell">
-           <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 384 384"><path d="M192 .002c-106.042 0-192 85.958-192 192 0 106.038 85.958 191.996 192 191.996 106.034 0 192-85.958 192-191.996 0-106.042-85.966-192-192-192zm-45.791 279.301h-43.902v-132.062h43.902v132.062zm-21.951-150.116h-.273c-14.732 0-24.271-10.121-24.271-22.806 0-12.951 9.827-22.834 24.86-22.834 14.998 0 24.257 9.884 24.537 22.834 0 12.685-9.553 22.806-24.853 22.806zm180.256 150.116h-43.888v-70.648c0-17.756-6.371-29.867-22.253-29.867-12.132 0-19.322 8.146-22.482 16.05-1.171 2.805-1.487 6.759-1.487 10.703v73.762h-43.88s.567-119.665 0-132.044h43.88v18.708c5.833-8.996 16.263-21.818 39.578-21.818 28.897 0 50.532 18.855 50.532 59.414v75.74z"/></svg>
+           <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 384 384"><path d="M192 .002c-106.042 0-192 85.958-192 192 0 106.038 85.958 191.996 192 191.996 106.034 0 192-85.958 192-191.996 0-106.042-85.966-192-192-192zm-45.791 279.301h-43.902v-132.062h43.902v132.062zm-21.951-150.116h-.273c-14.732 0-24.271-10.121-24.271-22.806 0-12.951 9.827-22.834 24.86-22.834 14.998 0 24.257 9.884 24.537 22.834 0 12.685-9.553 22.806-24.853 22.806zm180.256 150.116h-43.888v-70.648c0-17.756-6.371-29.867-22.253-29.867-12.132 0-19.322 8.146-22.482 16.05-1.171 2.805-1.487 6.759-1.487 10.703v73.762h-43.88s.567-119.665 0-132.044h43.88v18.708c5.833-8.996 16.263-21.818 39.578-21.818 28.897 0 50.532 18.855 50.532 59.414v75.74z"></svg>
          </a>
 
          <a href="https://www.facebook.com/workforsky/" target="blank" class="site-body__social-cell">
-           <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 384 384"><path d="M192.005 0c-106.039 0-192.005 85.959-192.005 192.002 0 106.039 85.966 191.998 192.005 191.998 106.035 0 191.995-85.959 191.995-191.998 0-106.043-85.96-192.002-191.995-192.002zm50.891 113.024l-21.696.015c-17.006 0-20.324 8.084-20.324 19.954v26.168h40.591l-5.275 40.99h-35.312v105.173h-42.312v-105.173h-35.401v-40.99h35.401v-30.223c0-35.078 21.412-54.188 52.705-54.188 15.009 0 27.881 1.117 31.623 1.62v36.654z"/></svg>
+           <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 384 384"><path d="M192.005 0c-106.039 0-192.005 85.959-192.005 192.002 0 106.039 85.966 191.998 192.005 191.998 106.035 0 191.995-85.959 191.995-191.998 0-106.043-85.96-192.002-191.995-192.002zm50.891 113.024l-21.696.015c-17.006 0-20.324 8.084-20.324 19.954v26.168h40.591l-5.275 40.99h-35.312v105.173h-42.312v-105.173h-35.401v-40.99h35.401v-30.223c0-35.078 21.412-54.188 52.705-54.188 15.009 0 27.881 1.117 31.623 1.62v36.654z"></svg>
          </a>
          <a href="https://twitter.com/workforsky" target="blan" class="site-body__social-cell">
-           <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 384 384"><path d="M192.002 0c-106.043 0-192.002 85.959-192.002 192.002 0 106.039 85.959 191.998 192.002 191.998 106.039 0 191.998-85.959 191.998-191.998 0-106.043-85.959-192.002-191.998-192.002zm98.357 152.114c.09 2.022.14 4.062.14 6.103 0 62.377-47.476 134.297-134.29 134.297-26.663 0-51.474-7.808-72.357-21.204 3.688.431 7.452.657 11.259.657 22.116 0 42.466-7.542 58.621-20.199-20.659-.388-38.085-14.039-44.097-32.787 2.884.56 5.847.847 8.882.847 4.306 0 8.476-.575 12.438-1.652-21.593-4.335-37.862-23.413-37.862-46.28v-.6c6.372 3.545 13.645 5.664 21.384 5.912-12.667-8.469-21.003-22.914-21.003-39.288 0-8.652 2.335-16.762 6.393-23.729 23.28 28.556 58.057 47.347 97.291 49.311-.805-3.458-1.222-7.057-1.222-10.749 0-26.074 21.129-47.203 47.192-47.203 13.572 0 25.849 5.735 34.461 14.901 10.746-2.112 20.849-6.041 29.968-11.45-3.527 11.019-11.005 20.274-20.756 26.114 9.55-1.139 18.647-3.682 27.112-7.431-6.329 9.468-14.331 17.775-23.554 24.43z"/></svg>
+           <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 384 384"><path d="M192.002 0c-106.043 0-192.002 85.959-192.002 192.002 0 106.039 85.959 191.998 192.002 191.998 106.039 0 191.998-85.959 191.998-191.998 0-106.043-85.959-192.002-191.998-192.002zm98.357 152.114c.09 2.022.14 4.062.14 6.103 0 62.377-47.476 134.297-134.29 134.297-26.663 0-51.474-7.808-72.357-21.204 3.688.431 7.452.657 11.259.657 22.116 0 42.466-7.542 58.621-20.199-20.659-.388-38.085-14.039-44.097-32.787 2.884.56 5.847.847 8.882.847 4.306 0 8.476-.575 12.438-1.652-21.593-4.335-37.862-23.413-37.862-46.28v-.6c6.372 3.545 13.645 5.664 21.384 5.912-12.667-8.469-21.003-22.914-21.003-39.288 0-8.652 2.335-16.762 6.393-23.729 23.28 28.556 58.057 47.347 97.291 49.311-.805-3.458-1.222-7.057-1.222-10.749 0-26.074 21.129-47.203 47.192-47.203 13.572 0 25.849 5.735 34.461 14.901 10.746-2.112 20.849-6.041 29.968-11.45-3.527 11.019-11.005 20.274-20.756 26.114 9.55-1.139 18.647-3.682 27.112-7.431-6.329 9.468-14.331 17.775-23.554 24.43z"></svg>
          </a>
 
        </div>
@@ -176,22 +118,20 @@
 
    <div class="site-map">
     <div class="site-map__cover" data-role="site-map-cover"></div> 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2356.974093410175!2d-1.5326343719494278!3d53.789948635494376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795c3dcbabe3b1%3A0xae964ead3d1ec225!2sClarence+House%2C+The+Boulevard%2C+Leeds%2C+West+Yorkshire+LS10+1LL!5e0!3m2!1sen!2suk!4v1446803370470" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2356.974093410175!2d-1.5326343719494278!3d53.789948635494376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795c3dcbabe3b1%3A0xae964ead3d1ec225!2sClarence+House%2C+The+Boulevard%2C+Leeds%2C+West+Yorkshire+LS10+1LL!5e0!3m2!1sen!2suk!4v1446803370470" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen=""></iframe>
     
    </div>
 
    <div class="site-footer">
      <div class="wrap">
-       <img src="http://assets.sky.com/dist/1268/static/sky-logo-redesign.png" alt="sky.com logo" class="site-footer__logo">
+       <img src="img/sky-logo.png" alt="sky.com logo" class="site-footer__logo"/>
        <p class="site-footer__tag">
          Believe in better
        </p>
      </div>
    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
-    <script src="js/script.js"></script>
-    <script>
-      FastClick.attach(document.body);
-    </script>
+    <script>!function(){function e(e){e?(o.setAttribute("aria-hidden","false"),a.setAttribute("aria-hidden","false")):(o.setAttribute("aria-hidden","true"),a.setAttribute("aria-hidden","true"))}function t(e){e?(u.setAttribute("data-playing",!0),u.querySelectorAll("svg")[0].setAttribute("aria-hidden",!0),u.querySelectorAll("svg")[1].setAttribute("aria-hidden",!1)):(u.setAttribute("data-playing",!1),u.querySelectorAll("svg")[1].setAttribute("aria-hidden",!0),u.querySelectorAll("svg")[0].setAttribute("aria-hidden",!1))}function n(){r.paused?(r.play(),t(!0),e(!1)):(r.pause(),t(!1),e(!1))}var r=document.querySelector('[data-role="player"]'),o=document.querySelector('[data-role="player-overlay"]'),a=document.querySelector('[data-role="player-overlay-icon"]'),u=document.querySelector('[data-role="player-play"]'),l=document.querySelector('[data-role="player-close"]'),c=document.querySelector('[data-role="player-scrub"]'),i=document.querySelector('[data-role="player-time"]'),s=document.querySelector('[data-role="player-max"]'),d=document.querySelector('[data-role="site-map-cover"]'),y="ontouchstart"in window||"DocumentTouch"in window&&document instanceof window.DocumentTouch,m=y?"ontouchstart":"onmousedown",p=y?"ontouchend":"onmouseup";(document.fullscreenEnabled||document.webkitFullscreenEnabled||document.msFullscreenEnabled||document.mozFullScreenEnabled)&&(s.style.display="block"),u.onclick=n,o.onclick=n,r.onclick=n,l.onclick=function(){r.pause(),e(!0),t(!1)},s.onclick=function(){r.requestFullscreen?r.requestFullscreen():r.mozRequestFullScreen?r.mozRequestFullScreen():r.webkitRequestFullscreen&&r.webkitRequestFullscreen()},c.oninput=function(){var e=r.duration*(this.value/100);r.currentTime=e},c[m]=function(){r.paused||r.setAttribute("was-playing",!0),r.pause()},c[p]=function(){r.getAttribute("was-playing")&&(r.play(),r.removeAttribute("was-playing"))},r.ontimeupdate=function(){var e=100/r.duration*r.currentTime;c.value=e,i.textContent="Day "+Math.max(1,Math.ceil(r.currentTime))},r.onended=function(){t(!1)},d.onclick=function(){this.style.pointerEvents="none"},d.parentNode.onmouseleave=function(){this.querySelector("div").style.pointerEvents="auto"}}();</script>
+    <script>FastClick.attach(document.body);</script>
 </body>
 </html>
