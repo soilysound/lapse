@@ -154,8 +154,65 @@
      overlay.onclick = playButtonClick;
   }
 
+  var hero = document.querySelectorAll('.glint-eastwood');
+  var styles = [];
+
+  function glintMe(){
+   if(!window.requestAnimationFrame){
+     return;
+   }
+   for(var i = -1;++i<hero.length;){
+     hero[i].setAttribute('data-glint-'+i, true);
+     var style = document.createElement('style');
+     styles[i] = style.cloneNode();
+     document.head.appendChild(styles[i]);
+   }
+    
+   glintRefresh();
+    
+  }
+
+  function isInVP(dims, height){
+     if(dims.bottom < (0 - 50)){
+      // out of viewport top
+      return false;
+     }
+
+      // @note - use a fallback for window.innerHeight in IE8
+        if((height - dims.top) < (0 - 50)){
+
+          // out of viewport bottom
+          return false;
+        }
+
+        // if it passes all that, its visible
+        return true;
+  }
+
+  function glintRefresh(){
+    var height = window.innerHeight;
+    for(var i = -1;++i<hero.length;){
+      var dims = hero[i].getBoundingClientRect();
+      if(isInVP(dims, height)){
+        setCss(i, dims.top, dims.bottom);
+      }
+    }
+    
+
+    setTimeout(function(){
+      window.requestAnimationFrame(glintRefresh);
+    }, 16)
+  }
+
+  function setCss(index, top, bottom){
+    var height = window.innerHeight;
+    var pc = 100 / height;
+    var topX = (((height - (height - top)) * pc) / 3);
+    var bottomX = (((height - (height - bottom)) * pc) / 3);
+    styles[index].textContent =  '.glint-eastwood[data-glint-'+index+']:before { transform: translateX(' + topX + '%)!important }.glint-eastwood[data-glint-'+index+']:after { transform: rotate(180deg) translateX(' + bottomX + '%)!important }';
+  }
+
+  glintMe();
   showHTML5Controls();
-
-
 
 })();
