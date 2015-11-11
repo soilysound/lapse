@@ -460,6 +460,7 @@ input[type=range]:focus::-ms-fill-upper {
   position: absolute;
   width: 360%;
   z-index: 10;
+  pointer-events: none;
 }
 
 .glint-eastwood:after {
@@ -537,6 +538,11 @@ input[type=range]:focus::-ms-fill-upper {
 
   .site-footer__logo {
     height: 40px;
+  }
+
+  .glint-eastwood:before,
+  .glint-eastwood:after{
+    background-size: auto 30px, auto;
   }
 
 }
