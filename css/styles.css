@@ -28,8 +28,8 @@ html {
 body, div, img, svg {
   visibility: visible;
   opacity: 1;
-  -webkit-transition: opacity 0.1666s, color 0.1666s, background-color 0.1666s, fill 0.1666s;
-  transition: opacity 0.1666s, color 0.1666s, background-color 0.1666s, fill 0.1666s;
+  -webkit-transition: opacity 0.1666s, color 0.1666s, background-color 2s, fill 0.1666s;
+  transition: opacity 0.1666s, color 0.1666s, background-color 2s, fill 0.1666s;
 }
 
 body {
@@ -297,12 +297,11 @@ input[type=range]:focus::-ms-fill-upper {
 
 .site-body > .wrap {
   padding: 110px 36px;
-  padding: 7vw 3vw;
 }
 
 .tick-1 > body > .site-body {
   background: #004199;
-  background: linear-gradient(to right, #004199 0%, #652679 100%);
+  background: linear-gradient(120deg, #004199 0%, #652679 100%);
 }
 
 .tick-1 h1 {
@@ -312,7 +311,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .tick-2 > body > .site-body {
   background: #a9237a;
-  background: linear-gradient(to right, #a9237a 0%, #e8007e 100%);
+  background: linear-gradient(120deg, #a9237a 0%, #e8007e 100%);
 }
 
 .tick-2 h1 {
@@ -322,7 +321,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .tick-3 > body > .site-body {
   background: #e8007e;
-  background: linear-gradient(to right, #e8007e 0%, #f28300 100%);
+  background: linear-gradient(120deg, #e8007e 0%, #f28300 100%);
 }
 
 .tick-3 h1 {
@@ -332,7 +331,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .tick-4 > body > .site-body {
   background: #e60000;
-  background: linear-gradient(to right, #e60000 0%, #f28300 100%);
+  background: linear-gradient(120deg, #f28300 0%, #f28300 100%);
 }
 
 .tick-4 h1 {
@@ -340,32 +339,44 @@ input[type=range]:focus::-ms-fill-upper {
   background: -webkit-linear-gradient(right, #e60000 0%, #f28300 100%);
 }
 
+
+/* */
 .tick-5 > body > .site-body {
-  background: #f28300;
-  background: linear-gradient(to right, #f28300 0%, #e8007e 100%);
+  background: #e60000;
+  background: linear-gradient(120deg, #F28300 0%, #F8B916 100%);
 }
 
 .tick-5 h1 {
+  color: #e60000;
+  background: -webkit-linear-gradient(right, #F28300 0%, #F8B916 100%);
+}
+
+.tick-6 > body > .site-body {
+  background: #f28300;
+  background: linear-gradient(120deg, #f28300 0%, #e8007e 100%);
+}
+
+.tick-6 h1 {
   color: #f28300;
   background: -webkit-linear-gradient(right, #f28300 0%, #e8007e 100%);
 }
 
-.tick-6 > body > .site-body {
+.tick-7 > body > .site-body {
   background: #e8007e;
-  background: linear-gradient(to right, #e8007e 0%, #a9237a 100%);
+  background: linear-gradient(120deg, #e8007e 0%, #a9237a 100%);
 }
 
-.tick-6 h1 {
+.tick-7 h1 {
   color: #e8007e;
   background: -webkit-linear-gradient(right, #e8007e 0%, #a9237a 100%);
 }
 
-.tick-7 > body > .site-body {
+.tick-8 > body > .site-body {
   background: #652679;
-  background: linear-gradient(to right, #652679 0%, #004199 100%);
+  background: linear-gradient(120deg, #652679 0%, #004199 100%);
 }
 
-.tick-7 h1 {
+.tick-8 h1 {
   color: #652679;
   background: -webkit-linear-gradient(right, #652679 0%, #004199 100%);
 }
@@ -379,7 +390,7 @@ input[type=range]:focus::-ms-fill-upper {
   display: table;
   width: 66.6%;
   max-width: 380px;
-  margin: 1.2em auto 4em;
+  margin: 0 auto 4em;
 }
 
 .site-body__social-cell {
@@ -398,7 +409,6 @@ input[type=range]:focus::-ms-fill-upper {
 
 .site-body__social-head {
   font-size: 2.2em;
-  margin-bottom: 0.4em
 }
 
 .site-body__social-tag {
@@ -462,7 +472,7 @@ input[type=range]:focus::-ms-fill-upper {
 @media all and (min-width: 1280px){
   
   .site-header > .wrap {
-    padding: 44px 3vw;
+    padding: 44px 3vw 55px;
   }
 }
 
@@ -475,10 +485,6 @@ input[type=range]:focus::-ms-fill-upper {
   h2 {
     font-size: 1em;
   }
-
-  .site-body > .wrap {
-    padding: 10vw 3vw;
-  }
 }
 
 @media all and (max-width: 600px){
@@ -490,10 +496,15 @@ input[type=range]:focus::-ms-fill-upper {
   .wrap {
     padding: 7vw 3vw;
   }
+
+  .site-body > .wrap {
+    padding: 36px 18px;
+    padding: 11vw 3vw 12vw;
+  }
   
   .site-body__social {
-    max-width: 260px;
-    margin: 1em auto 2.2em;
+    max-width: 240px;
+    margin: 0 auto 2.2em;
   }
 
   .site-body__social-cell > svg {
