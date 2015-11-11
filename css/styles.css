@@ -204,9 +204,18 @@ svg {
 /*input range style*/
 input[type=range] {
   -webkit-appearance: none;
+  -moz-appearance: none;
   margin: 0;
   width: 100%;
   background: none;
+
+  position: relative;
+}
+
+@supports (-moz-appearance:meterbar) {
+  input[type=range] {
+    top: 4px;
+  }
 }
 
 input[type=range]:focus {
@@ -259,9 +268,8 @@ input[type=range]::-moz-range-track {
 }
 
 input[type=range]::-ms-track {
-  width: 100%;
+  width: auto;
   height: 12px;
-  width: 12px;
   cursor: pointer;
   animate: 0.2s;
   background: transparent;
