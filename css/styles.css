@@ -269,13 +269,14 @@ input[type=range]::-moz-range-track {
 
 input[type=range]::-ms-track {
   width: auto;
-  height: 12px;
+  height: 8px;
   cursor: pointer;
   animate: 0.2s;
   background: transparent;
   border-color: transparent;
   border-width: 0;
   color: transparent;
+  margin-top: 3px;
 }
 
 input[type=range]::-ms-fill-lower {
