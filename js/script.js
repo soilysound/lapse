@@ -197,7 +197,6 @@
         setCss(i, dims.top, dims.bottom);
       }
     }
-    
 
     setTimeout(function(){
       window.requestAnimationFrame(glintRefresh);
