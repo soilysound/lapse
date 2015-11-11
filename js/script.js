@@ -158,7 +158,7 @@
   var styles = [];
 
   function glintMe(){
-   if(!window.requestAnimationFrame){
+   if(!window.requestAnimationFrame || hasTouch){
      return;
    }
    for(var i = -1;++i<hero.length;){
