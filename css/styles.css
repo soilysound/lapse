@@ -64,7 +64,7 @@ h1 {
 h2 {
   font-size: 1.3em;
   font-weight: 200;
-  color: #666;
+  color: #999;
 }
 
 /*video player*/
@@ -194,6 +194,7 @@ svg {
   left: 1em;
   top: 1em;
   color: white;
+  font-weight: bold;
   font-size: 1em;
   line-height: 1;
   z-index: 4;
@@ -347,7 +348,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .tick-5 h1 {
-  color: #e60000;
+  color: #F28300;
   background: -webkit-linear-gradient(right, #F28300 0%, #F8B916 100%);
 }
 
@@ -441,7 +442,6 @@ input[type=range]:focus::-ms-fill-upper {
 
 
 .glint-eastwood {
-  padding-bottom: 55%;
   position: relative;
   z-index: 10;
 }
@@ -470,9 +470,9 @@ input[type=range]:focus::-ms-fill-upper {
 
 @media all and (min-width: 1280px){
   
-  .site-header > .wrap {
+  /*.site-header > .wrap {
     padding: 44px 3vw 55px;
-  }
+  }*/
 }
 
 @media all and (max-width: 900px){
