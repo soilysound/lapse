@@ -173,13 +173,13 @@
   }
 
   function isInVP(dims, height){
-     if(dims.bottom < (0 - 50)){
+     if(dims.bottom < (0 - 40)){
       // out of viewport top
       return false;
      }
 
       // @note - use a fallback for window.innerHeight in IE8
-        if((height - dims.top) < (0 - 50)){
+        if((height - dims.top) < (0 - 40)){
 
           // out of viewport bottom
           return false;
@@ -201,7 +201,7 @@
 
     setTimeout(function(){
       window.requestAnimationFrame(glintRefresh);
-    }, 16)
+    }, 16);
   }
 
   function setCss(index, top, bottom){

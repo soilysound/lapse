@@ -342,7 +342,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 /* */
 .tick-5 > body > .site-body {
-  background: #e60000;
+  background: #F28300;
   background: linear-gradient(120deg, #F28300 0%, #F8B916 100%);
 }
 
@@ -459,6 +459,7 @@ input[type=range]:focus::-ms-fill-upper {
   left: -132%;
   position: absolute;
   width: 360%;
+  z-index: 10;
 }
 
 .glint-eastwood:after {
@@ -497,12 +498,12 @@ input[type=range]:focus::-ms-fill-upper {
 
   .site-body > .wrap {
     padding: 36px 18px;
-    padding: 12vw 3vw 13vw;
+    padding: 13vw 3vw 14vw;
   }
   
   .site-body__social {
     max-width: 240px;
-    margin: 0 auto 1.6em;
+    margin: 0 auto 1.2em;
   }
 
   .site-body__social-cell > svg {
