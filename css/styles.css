@@ -492,6 +492,10 @@ input[type=range]:focus::-ms-fill-upper {
   h2 {
     font-size: 1em;
   }
+
+  .site-body > .wrap {
+    padding: 15vw 3vw 16vw;
+  }
 }
 
 @media all and (max-width: 600px){
@@ -506,7 +510,7 @@ input[type=range]:focus::-ms-fill-upper {
 
   .site-body > .wrap {
     padding: 36px 18px;
-    padding: 10vw 3vw 11vw;
+    padding: 13vw 3vw 14vw;
   }
   
   .site-body__social {
@@ -545,10 +549,6 @@ input[type=range]:focus::-ms-fill-upper {
 
   .site-footer__logo {
     height: 40px;
-  }
-
-  .site-body > .wrap {
-    padding: 13vw 3vw 14vw;
   }
 
   .glint-eastwood {
