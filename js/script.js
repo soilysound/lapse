@@ -163,7 +163,7 @@
 
   function glintMe(){
 
-    if(!window.requestAnimationFrame || hasTouch){
+    if(!window.requestAnimationFrame){
       return;
     }
     
