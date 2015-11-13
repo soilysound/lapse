@@ -162,17 +162,18 @@
   var styles = [];
 
   function glintMe(){
-   if(!window.requestAnimationFrame || hasTouch){
-     return;
-   }
-   for(var i = -1;++i<hero.length;){
-     hero[i].setAttribute('data-glint-'+i, true);
-     var style = document.createElement('style');
-     styles[i] = style.cloneNode();
-     document.head.appendChild(styles[i]);
-   }
+
+    if(!window.requestAnimationFrame || hasTouch){
+      return;
+    }
     
-   glintRefresh();
+    for(var i = -1;++i<hero.length;){
+      if(hero[i].className.match(/after/)){
+        hero[i].after = true;
+      }
+    }
+
+    glintRefresh();
     
   }
 
@@ -199,21 +200,34 @@
     for(var i = -1;++i<hero.length;){
       var dims = hero[i].getBoundingClientRect();
       if(isInVP(dims, height)){
-        setCss(i, dims.top, dims.bottom);
+        setCss(hero[i], dims.top, dims.bottom, height);
       }
     }
 
-    setTimeout(function(){
-      window.requestAnimationFrame(glintRefresh);
-    }, 16);
+    window.requestAnimationFrame(glintRefresh);
+    
   }
 
-  function setCss(index, top, bottom){
-    var height = window.innerHeight;
+  function setCss(item, top, bottom, height){
+
     var pc = 100 / height;
     var topX = (((height - (height - top)) * pc) / 3);
-    var bottomX = (((height - (height - bottom)) * pc) / 3);
-    styles[index].textContent =  '.glint-eastwood[data-glint-'+index+']:before { -webkit-transform: translateX(' + topX + '%)!important; transform: translateX(' + topX + '%)!important; ' + removeTransition + ' }.glint-eastwood[data-glint-'+index+']:after { -webkit-transform: rotate(180deg) translateX(' + bottomX + '%)!important;transform: rotate(180deg) translateX(' + bottomX + '%)!important; ' + removeTransition + ' }';
+    var bottomX = (((height - (height - bottom)) * pc) / 3) * -1;
+
+    if(item.after){
+      item.style.cssText = [
+        '-webkit-transform: translateX(' + bottomX + '%) rotate(180deg) !important', 
+        'transform: translateX(' + bottomX + '%) rotate(180deg) !important'
+      ].join(';')
+    }
+    else {
+      item.style.cssText = [
+        '-webkit-transform: translateX(' + topX + '%) !important', 
+        'transform: translateX(' + topX + '%) !important'
+      ].join(';') 
+
+    }
+
   }
 
   glintMe();

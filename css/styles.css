@@ -453,10 +453,6 @@ input[type=range]:focus::-ms-fill-upper {
 .glint-eastwood {
   position: relative;
   z-index: 10;
-}
-
-.glint-eastwood:before,
-.glint-eastwood:after{
   content: "";
   height: 40px;
   will-change: transform;
@@ -466,14 +462,14 @@ input[type=range]:focus::-ms-fill-upper {
   background-position: 33.33% 50%, 0 50%; 
   background-repeat: no-repeat, repeat-x;
   top: -18px;
-  left: -132%;
+  left: -100%;
   position: absolute;
-  width: 360%;
+  width: 300%;
   z-index: 10;
   pointer-events: none;
 }
 
-.glint-eastwood:after {
+.glint-eastwood--after {
   top: auto;
   bottom: -18px;
   -webkit-transform: rotate(180deg);
