@@ -152,10 +152,10 @@
       };
 
       playButton.onclick = playButtonClick;
-      video.onclick = playButtonClick;
+      
     }
-
-     overlay.onclick = playButtonClick;
+    video.onclick = playButtonClick;
+    overlay.onclick = playButtonClick;
   }
 
   var hero = document.querySelectorAll('.glint-eastwood');
