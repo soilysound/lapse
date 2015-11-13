@@ -105,7 +105,7 @@
     playerScrub.value = value;
 
     // update time
-    playerTime.textContent = "Day " + Math.max(1, Math.ceil(video.currentTime));
+    playerTime.textContent = "Day " + (Math.max(1, Math.ceil(video.currentTime * 2)));
   };
 
   video.onended = function(){
