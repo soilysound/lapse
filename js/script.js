@@ -18,6 +18,10 @@
   var touchdown = hasTouch ? 'ontouchstart' : 'onmousedown';
   var touchoff = hasTouch ? 'ontouchend' : 'onmouseup';
 
+  var isSafari = /constructor/i.test(window.HTMLElement);
+  var removeTransition = isSafari ? "-webkit-transition: none;transition: none;" : "";
+
+
   if (document.fullscreenEnabled || 
     document.webkitFullscreenEnabled || 
     document.msFullscreenEnabled ||
@@ -173,6 +177,7 @@
   }
 
   function isInVP(dims, height){
+
      if(dims.bottom < (0 - 40)){
       // out of viewport top
       return false;
@@ -208,7 +213,7 @@
     var pc = 100 / height;
     var topX = (((height - (height - top)) * pc) / 3);
     var bottomX = (((height - (height - bottom)) * pc) / 3);
-    styles[index].textContent =  '.glint-eastwood[data-glint-'+index+']:before { -webkit-transform: translateX(' + topX + '%)!important; transform: translateX(' + topX + '%)!important }.glint-eastwood[data-glint-'+index+']:after { -webkit-transform: rotate(180deg) translateX(' + bottomX + '%)!important;transform: rotate(180deg) translateX(' + bottomX + '%)!important }';
+    styles[index].textContent =  '.glint-eastwood[data-glint-'+index+']:before { -webkit-transform: translateX(' + topX + '%)!important; transform: translateX(' + topX + '%)!important; ' + removeTransition + ' }.glint-eastwood[data-glint-'+index+']:after { -webkit-transform: rotate(180deg) translateX(' + bottomX + '%)!important;transform: rotate(180deg) translateX(' + bottomX + '%)!important; ' + removeTransition + ' }';
   }
 
   glintMe();
