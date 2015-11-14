@@ -237,9 +237,12 @@
       if(show){
         parent.setAttribute('aria-hidden', 'false')
       }
+
       else {
+        
         parent.setAttribute('aria-hidden', 'true');
       }
+    
     }
 
     var parent = document.querySelector('.share-overlay');
@@ -251,14 +254,30 @@
       links[i].href += page;
     }
 
-    parent.onclick = function(){
-      toggle(false);
+    parent.onclick = function(e){
+      if(!parent.querySelector('.share-overlay__body').contains(e.target)){
+        toggle(false);
+      }
     }
 
     document.querySelector('a[data-role="share-button"]').onclick = function(e){
       e.preventDefault();
       toggle(true);
     }
+
+    input.onclick = function(){
+
+      input.select();
+
+      try {
+        var successful = document.execCommand('copy');
+      } 
+
+      catch (err) {}
+
+    }
+
+      
   }
 
   glintMe();

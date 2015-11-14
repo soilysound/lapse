@@ -112,6 +112,10 @@ svg[aria-hidden="true"] {
   z-index: 5;
 }
 
+.player__overlay > svg {
+  fill: white;
+}
+
 .player__overlay-image {
   cursor: pointer;
   z-index: 4;
@@ -154,7 +158,7 @@ svg[aria-hidden="true"] {
 }
 
 svg {
-  fill: white;
+  fill: currentColor;
   -webkit-filter: drop-shadow(0 0 1px rgba(0,0,0,0.6));
   filter: drop-shadow(0 0 1px rgba(0,0,0,0.6))
 }
@@ -478,7 +482,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 /*share*/
 .share-overlay {
-  background: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.5);
   position: fixed;
   top: 0;
   left: 0;
@@ -502,10 +506,67 @@ input[type=range]:focus::-ms-fill-upper {
   background: white;
   width: 600px;
   max-width: 90%;
-  height: 25%;
-  min-height: 180px;
+  height: 30%;
+  min-height: 220px;
+  padding: 2em;
 
 }
+
+.share-overlay__header {
+  font-weight: 200;
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 0.4em;
+}
+
+.share-overlay__input {
+  font-size: 0.9em;
+  padding: 0.2em 0.4em;
+  color: #999;
+  margin-bottom: 1em;
+  width: 50%;
+}
+
+.share-button {
+  display: inline-block;
+  width: 0.55em;
+  height: 0.55em;
+  overflow: hidden;
+  position: relative;
+  color: #999;
+  vertical-align: middle;
+}
+
+.share-button > svg {
+  fill: currentColor;
+  position: absolute;
+  width: 94%;
+  height: 94%;
+  left: 2%;
+  right: 2%;
+}
+
+.share-overlay__links {
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  text-align: center;
+}
+
+.share-overlay__links > li {
+  margin: 0 0.3em;
+}
+
+.share-overlay__links > li,
+.share-overlay__links > li > a {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  position: relative;
+  overflow: hidden;
+  color: #999;
+}
+
 
 @media all and (min-width: 1280px){
   
