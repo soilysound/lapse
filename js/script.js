@@ -230,7 +230,39 @@
 
   }
 
+
+  function share(){
+
+    function toggle(show){
+      if(show){
+        parent.setAttribute('aria-hidden', 'false')
+      }
+      else {
+        parent.setAttribute('aria-hidden', 'true');
+      }
+    }
+
+    var parent = document.querySelector('.share-overlay');
+    var input = parent.querySelector('input');
+    var links = document.querySelectorAll('a');
+    var page = location.href;
+    input.value = page;
+    for(var i = -1;++i<links.length;){
+      links[i].href += page;
+    }
+
+    parent.onclick = function(){
+      toggle(false);
+    }
+
+    document.querySelector('a[data-role="share-button"]').onclick = function(e){
+      e.preventDefault();
+      toggle(true);
+    }
+  }
+
   glintMe();
   showHTML5Controls();
+  share();
 
 })();

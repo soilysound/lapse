@@ -476,6 +476,37 @@ input[type=range]:focus::-ms-fill-upper {
   transform: rotate(180deg);
 }
 
+/*share*/
+.share-overlay {
+  background: rgba(255,255,255,0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.33s;
+  visibility: hidden;
+  opacity: 0
+}
+
+.share-overlay[aria-hidden="false"]{
+  visibility: visible;
+  opacity: 1;
+}
+
+.share-overlay__body {
+  background: white;
+  width: 600px;
+  max-width: 90%;
+  height: 25%;
+  min-height: 180px;
+
+}
+
 @media all and (min-width: 1280px){
   
   /*.site-header > .wrap {
