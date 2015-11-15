@@ -514,7 +514,7 @@ input[type=range]:focus::-ms-fill-upper {
 .share-overlay__body {
   background: white;
   width: 600px;
-  max-width: 90%;
+  max-width: 90vw;
   height: 30%;
   min-height: 220px;
   padding: 2em;
