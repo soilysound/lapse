@@ -486,20 +486,29 @@ input[type=range]:focus::-ms-fill-upper {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
   z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: table;
   transition: opacity 0.33s;
-  visibility: hidden;
-  opacity: 0
 }
 
-.share-overlay[aria-hidden="false"]{
-  visibility: visible;
+.share-overlay,
+.share-overlay > .share-overlay__inner {
+  visibility: hidden!important;
+  opacity: 0;
+}
+
+.share-overlay[aria-hidden="false"],
+.share-overlay[aria-hidden="false"] > .share-overlay__inner {
+  visibility: visible!important;
   opacity: 1;
+}
+
+.share-overlay__inner {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .share-overlay__body {
@@ -509,6 +518,7 @@ input[type=range]:focus::-ms-fill-upper {
   height: 30%;
   min-height: 220px;
   padding: 2em;
+  display: inline-block;
 
 }
 
