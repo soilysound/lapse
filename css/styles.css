@@ -114,6 +114,8 @@ svg[aria-hidden="true"] {
 
 .player__overlay > svg {
   fill: white;
+  -webkit-filter: drop-shadow(0 0 1px rgba(0,0,0,0.6));
+  filter: drop-shadow(0 0 1px rgba(0,0,0,0.6))
 }
 
 .player__overlay-image {
@@ -159,8 +161,6 @@ svg[aria-hidden="true"] {
 
 svg {
   fill: currentColor;
-  -webkit-filter: drop-shadow(0 0 1px rgba(0,0,0,0.6));
-  filter: drop-shadow(0 0 1px rgba(0,0,0,0.6))
 }
 
 .controls__play-pause > svg[aria-hidden="true"]{
@@ -550,10 +550,10 @@ input[type=range]:focus::-ms-fill-upper {
 .share-button > svg {
   fill: currentColor;
   position: absolute;
-  width: 94%;
-  height: 94%;
-  left: 2%;
-  right: 2%;
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  right: 10%;
 }
 
 .share-overlay__links {
