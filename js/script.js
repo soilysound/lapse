@@ -235,12 +235,13 @@
 
     function toggle(show){
       if(show){
-        parent.setAttribute('aria-hidden', 'false')
+        parent.setAttribute('aria-hidden', 'false');
+        document.documentElement.style.cssText = "overflow: hidden";
       }
 
       else {
-        
         parent.setAttribute('aria-hidden', 'true');
+        document.documentElement.style.cssText = "";
       }
     
     }
@@ -258,12 +259,18 @@
       if(!parent.querySelector('.share-overlay__body').contains(e.target)){
         toggle(false);
       }
-    }
+    };
+
+    parent.ontouchstart = function(e){
+      if(!parent.querySelector('.share-overlay__body').contains(e.target)){
+        e.preventDefault();
+      }
+    };
 
     document.querySelector('a[data-role="share-button"]').onclick = function(e){
       e.preventDefault();
       toggle(true);
-    }
+    };
 
     input.onclick = function(){
 
