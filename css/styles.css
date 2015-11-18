@@ -534,7 +534,8 @@ input[type=range]:focus::-ms-fill-upper {
   padding: 0.2em 0.4em;
   color: #999;
   margin-bottom: 1em;
-  width: 50%;
+  width: 80%;
+  max-width: 300px;
 }
 
 .share-button {
