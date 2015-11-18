@@ -537,21 +537,26 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .share-button {
-  display: inline-block;
+  display: block;
   overflow: hidden;
   position: relative;
-  color: #999;
-  fill: #999;
+  color: #aaa;
+  fill: #aaa;
   vertical-align: middle;
   font-size: 0.9em;
   font-weight: 200;
+  pading: 0.2em;
+  width: 4.2em;
+  margin: 0 auto -0.5em;
 }
 
 .share-button > svg {
   fill: inherit;
-  width: 0.9em;
-  height: 0.9em;
+  width: 0.8em;
+  height: 0.8em;
   vertical-align: middle;
+  position: relative;
+  top: -1px;
 }
 
 .share-overlay__links {
