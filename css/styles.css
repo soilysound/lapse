@@ -26,8 +26,6 @@ html {
 }
 
 body, div, img, svg {
-  visibility: visible;
-  opacity: 1;
   -webkit-transition: opacity 0.1666s, color 0.1666s, background-color 2s, fill 0.1666s;
   transition: opacity 0.1666s, color 0.1666s, background-color 2s, fill 0.1666s;
 }
@@ -65,6 +63,7 @@ h2 {
   font-size: 1.3em;
   font-weight: 200;
   color: #999;
+  margin-bottom: 0.5em;
 }
 
 /*video player*/
@@ -539,21 +538,20 @@ input[type=range]:focus::-ms-fill-upper {
 
 .share-button {
   display: inline-block;
-  width: 0.55em;
-  height: 0.55em;
   overflow: hidden;
   position: relative;
   color: #999;
+  fill: #999;
   vertical-align: middle;
+  font-size: 0.9em;
+  font-weight: 200;
 }
 
 .share-button > svg {
-  fill: currentColor;
-  position: absolute;
-  width: 80%;
-  height: 80%;
-  left: 10%;
-  right: 10%;
+  fill: inherit;
+  width: 0.9em;
+  height: 0.9em;
+  vertical-align: middle;
 }
 
 .share-overlay__links {
