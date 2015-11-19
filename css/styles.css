@@ -166,6 +166,10 @@ svg {
   display: none;
 }
 
+.controls {
+  color: white;
+}
+
 .controls__scrub {
   position: absolute;
   left: 50px;
