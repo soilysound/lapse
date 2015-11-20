@@ -21,6 +21,8 @@
   var isSafari = /constructor/i.test(window.HTMLElement);
   var removeTransition = isSafari ? "-webkit-transition: none;transition: none;" : "";
 
+  var scrollBarWidth = 0;
+
 
   if (document.fullscreenEnabled || 
     document.webkitFullscreenEnabled || 
@@ -28,6 +30,33 @@
     document.mozFullScreenEnabled) {
     playerMax.style.display = "block";
   }
+
+  function getScrollBarWidth(){
+
+    var outer = document.createElement("div");
+    outer.style.visibility = "hidden";
+    outer.style.width = "100px";
+    outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+
+    document.body.appendChild(outer);
+
+    var widthNoScroll = outer.offsetWidth;
+    // force scrollbars
+    outer.style.overflow = "scroll";
+
+    // add innerdiv
+    var inner = document.createElement("div");
+    inner.style.width = "100%";
+    outer.appendChild(inner);
+
+    var widthWithScroll = inner.offsetWidth;
+
+    // remove divs
+    outer.parentNode.removeChild(outer);
+
+    return widthNoScroll - widthWithScroll;
+  }
+  
 
   function showOverlay(show){
     if(show){
@@ -236,7 +265,7 @@
     function toggle(show){
       if(show){
         parent.setAttribute('aria-hidden', 'false');
-        document.documentElement.style.cssText = "overflow: hidden";
+        document.documentElement.style.cssText = "overflow: hidden;padding-right:" + scrollBarWidth + "px";
       }
 
       else {
@@ -290,5 +319,6 @@
   glintMe();
   showHTML5Controls();
   share();
+  scrollBarWidth = getScrollBarWidth();
 
 })();
