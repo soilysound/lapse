@@ -54,7 +54,7 @@ a {
 h1 {
   font-size: 3.2em;
   line-height: 1.2;
-  font-weight: 200;  
+  font-weight: 600;  
   -webkit-background-clip: text!important;
   -webkit-text-fill-color: transparent!important;
 }
@@ -348,7 +348,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .tick-4 > body > .site-body {
   background: #e60000;
-  background: linear-gradient(120deg, #f28300 0%, #f28300 100%);
+  background: linear-gradient(120deg, #e60000 0%, #f28300 100%);
 }
 
 .tick-4 h1 {
@@ -356,8 +356,6 @@ input[type=range]:focus::-ms-fill-upper {
   background: -webkit-linear-gradient(right, #e60000 0%, #f28300 100%);
 }
 
-
-/* */
 .tick-5 > body > .site-body {
   background: #F28300;
   background: linear-gradient(120deg, #F28300 0%, #F8B916 100%);
